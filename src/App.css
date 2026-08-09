@@ -1,9 +1,13 @@
-/* App.css */
+/* ===== GLOBAL ===== */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,7 +16,9 @@ body {
   color: #111827;
 }
 
-/* Navbar */
+
+/* ===== NAVBAR ===== */
+
 .navbar {
   height: 72px;
   width: 100%;
@@ -28,6 +34,7 @@ body {
   font-size: 22px;
   font-weight: 700;
   color: #111827;
+  text-decoration: none;
 }
 
 .nav-links {
@@ -48,7 +55,9 @@ body {
   color: #2563eb;
 }
 
-/* Hero Section */
+
+/* ===== HERO ===== */
+
 .hero {
   min-height: 500px;
   display: flex;
@@ -56,10 +65,13 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+
   padding: 80px 20px;
+
   background: linear-gradient(
     180deg,
-    #f8fbff 0%,
+    #eaf4ff 0%,
+    #f8fbff 55%,
     #ffffff 100%
   );
 }
@@ -70,14 +82,23 @@ body {
   font-weight: 800;
   letter-spacing: -2px;
   margin-bottom: 24px;
-  color: #111827;
+
+  background: linear-gradient(
+    90deg,
+    #111827,
+    #2563eb
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero p {
   max-width: 700px;
   font-size: 18px;
   line-height: 1.7;
-  color: #6b7280;
+  color: #667085;
   margin-bottom: 32px;
 }
 
@@ -85,47 +106,142 @@ body {
   border: none;
   padding: 14px 28px;
   border-radius: 8px;
-  background: #111827;
+
+  background: #2563eb;
   color: #ffffff;
+
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
+
   transition: all 0.3s ease;
 }
 
 .hero button:hover {
-  background: #2563eb;
+  background: #1d4ed8;
   transform: translateY(-2px);
 }
 
-/* About Section */
+
+/* ===== ABOUT ===== */
+
 .about {
   min-height: 320px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   text-align: center;
+
   padding: 70px 20px;
+
   background: #ffffff;
 }
 
 .about h2 {
   font-size: 38px;
   font-weight: 700;
+
   margin-bottom: 20px;
+
   color: #111827;
 }
 
 .about p {
   max-width: 700px;
+
   font-size: 17px;
   line-height: 1.7;
+
   color: #6b7280;
 }
 
-/* Mobile */
+
+/* ===== CONTACT ===== */
+
+.contact {
+  min-height: 420px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 80px 20px;
+
+  background: #f8fafc;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+.contact-content {
+  max-width: 650px;
+}
+
+.contact-label {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  color: #2563eb;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+
+  font-size: 48px;
+
+  color: #111827;
+}
+
+.contact p {
+  margin-bottom: 30px;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: #667085;
+}
+
+
+/* ===== EMAIL BUTTON ===== */
+
+.contact-button {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  border-radius: 8px;
+
+  background: #111827;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+
+/* ===== MOBILE ===== */
+
 @media (max-width: 768px) {
+
   .navbar {
     padding: 0 5%;
   }
@@ -155,75 +271,7 @@ body {
   .about h2 {
     font-size: 32px;
   }
-}
-html {
-  scroll-behavior: smooth;
-}
-/* ===== CONTACT SECTION ===== */
 
-.contact {
-  min-height: 420px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 20px;
-  background: #f8fafc;
-  border-top: 1px solid #e5e7eb;
-}
-
-.contact-content {
-  max-width: 650px;
-}
-
-.contact-label {
-  display: inline-block;
-  margin-bottom: 15px;
-  color: #2563eb;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.contact h2 {
-  margin-bottom: 20px;
-  font-size: 48px;
-  color: #111827;
-}
-
-.contact p {
-  margin-bottom: 30px;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #667085;
-}
-
-.contact-button {
-  display: inline-block;
-  padding: 14px 28px;
-  border-radius: 8px;
-  background: #111827;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.contact-button:hover {
-  background: #2563eb;
-  transform: translateY(-2px);
-}
-
-/* Smooth scrolling */
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Mobile */
-
-@media (max-width: 768px) {
   .contact {
     min-height: 380px;
     padding: 60px 20px;

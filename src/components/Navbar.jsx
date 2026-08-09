@@ -1,14 +1,59 @@
 function Navbar() {
+  const goHome = () => {
+    window.location.href = "/#home";
+  };
+
+  const goAbout = () => {
+    window.location.href = "/#about";
+  };
+
+  const goContact = () => {
+    window.location.href = "/#contact";
+  };
+
   return (
     <nav className="navbar">
-      <a href="#home" className="logo">
+      <a
+        href="/#home"
+        className="logo"
+        onClick={(e) => {
+          e.preventDefault();
+          goHome();
+        }}
+      >
         ABTalks
       </a>
 
       <div className="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a
+          href="/#home"
+          onClick={(e) => {
+            e.preventDefault();
+            goHome();
+          }}
+        >
+          Home
+        </a>
+
+        <a
+          href="/#about"
+          onClick={(e) => {
+            e.preventDefault();
+            goAbout();
+          }}
+        >
+          About
+        </a>
+
+        <a
+          href="/#contact"
+          onClick={(e) => {
+            e.preventDefault();
+            goContact();
+          }}
+        >
+          Contact
+        </a>
       </div>
     </nav>
   );

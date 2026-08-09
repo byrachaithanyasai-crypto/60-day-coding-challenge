@@ -9,6 +9,7 @@ function Dashboard() {
       <h1>Your 60-Day Challenge</h1>
 
       <div className="dashboard-grid">
+
         <div className="card">
           <h2>🔥 Current Streak</h2>
           <p>12 Days</p>
@@ -54,6 +55,7 @@ function Dashboard() {
           <h2>🔄 Recovery Mode</h2>
           <p>Not active</p>
         </div>
+
       </div>
     </div>
   );

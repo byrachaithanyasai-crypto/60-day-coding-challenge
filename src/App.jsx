@@ -9,12 +9,6 @@ function App() {
     });
   };
 
-  const goToContact = () => {
-    document.getElementById("contact").scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
   const path = window.location.pathname;
 
   if (path === "/dashboard") {
@@ -31,7 +25,8 @@ function App() {
       <Navbar />
 
       <main>
-        <section className="hero">
+        {/* Home Section */}
+        <section id="home" className="hero">
           <h1>Ideas that inspire</h1>
 
           <p>
@@ -42,6 +37,7 @@ function App() {
           <button onClick={goToAbout}>Explore More</button>
         </section>
 
+        {/* About Section */}
         <section id="about" className="about">
           <h2>About ABTalks</h2>
 
@@ -51,12 +47,25 @@ function App() {
           </p>
         </section>
 
+        {/* Contact Section */}
         <section id="contact" className="contact">
-          <h2>Let's talk</h2>
+          <div className="contact-content">
+            <span className="contact-label">CONTACT</span>
 
-          <p>Have an idea or want to connect with us?</p>
+            <h2>Let's talk</h2>
 
-          <button onClick={goToContact}>Email us</button>
+            <p>
+              Have an idea, question, or just want to start a conversation?
+              We'd love to hear from you.
+            </p>
+
+            <a
+              className="contact-button"
+              href="mailto:abtalks@gmail.com"
+            >
+              Email us →
+            </a>
+          </div>
         </section>
       </main>
     </>
