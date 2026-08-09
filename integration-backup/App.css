@@ -1,0 +1,2121 @@
+<<<<<<< HEAD
+/* ===== GLOBAL ===== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+=======
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+>>>>>>> chaitanya/integration
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+<<<<<<< HEAD
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #111827;
+}
+
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+  height: 72px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+=======
+  min-width: 320px;
+
+  background: #050716;
+
+  color: #ffffff;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(70, 65, 150, 0.12),
+      transparent 35%
+    ),
+    #050716;
+
+  overflow-x: hidden;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+  width: min(1200px, calc(100% - 48px));
+
+  min-height: 90px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+
+/* LOGO */
+
+.logo {
+  justify-self: start;
+
+  text-decoration: none;
+
+  font-size: 32px;
+
+  font-weight: 900;
+
+  letter-spacing: -1.5px;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 36px;
+
+  padding: 16px 34px;
+
+  background: rgba(255, 255, 255, 0.055);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 18px;
+>>>>>>> chaitanya/integration
+}
+
+.nav-links a {
+  text-decoration: none;
+<<<<<<< HEAD
+  color: #374151;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+
+/* ===== HERO ===== */
+
+.hero {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 80px 20px;
+
+  background: linear-gradient(
+    180deg,
+    #eaf4ff 0%,
+    #f8fbff 55%,
+    #ffffff 100%
+  );
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+
+  background: linear-gradient(
+    90deg,
+    #111827,
+    #2563eb
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #667085;
+  margin-bottom: 32px;
+}
+
+.hero button {
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.hero button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+
+/* ===== ABOUT ===== */
+
+.about {
+  min-height: 320px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 70px 20px;
+
+  background: #ffffff;
+}
+
+.about h2 {
+  font-size: 38px;
+  font-weight: 700;
+
+  margin-bottom: 20px;
+
+  color: #111827;
+}
+
+.about p {
+  max-width: 700px;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: #6b7280;
+}
+
+
+/* ===== CONTACT ===== */
+
+.contact {
+  min-height: 420px;
+=======
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  color: #ffffff;
+
+  opacity: 0.9;
+
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+
+/* JOIN */
+
+.join-btn {
+  justify-self: end;
+
+  text-decoration: none;
+
+  background: #ffffff;
+
+  color: #070814;
+
+  border-radius: 16px;
+
+  padding: 18px 28px;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 0 30px rgba(110, 100, 255, 0.16);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.join-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 40px rgba(110, 100, 255, 0.3);
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.primary-btn,
+.secondary-btn {
+  min-height: 56px;
+
+  padding: 0 28px;
+
+  border-radius: 16px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+
+  font-weight: 800;
+
+  border: 1px solid transparent;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.primary-btn {
+  background: #ffffff;
+
+  color: #070814;
+
+  box-shadow:
+    0 0 35px rgba(110, 100, 255, 0.2);
+
+  border: none;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 0 45px rgba(110, 100, 255, 0.35);
+}
+
+.secondary-btn {
+  background: rgba(255, 255, 255, 0.03);
+
+  color: #ffffff;
+
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.secondary-btn:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(255, 255, 255, 0.5);
+
+  background: rgba(255, 255, 255, 0.07);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+  width: min(1100px, calc(100% - 40px));
+
+  min-height: 700px;
+
+  margin: 0 auto;
+
+  padding: 170px 20px 100px;
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+/* BADGE */
+
+.badge {
+  padding: 18px 38px;
+
+  border: 1px solid #7068ff;
+
+  border-radius: 999px;
+
+  font-size: 16px;
+
+  font-weight: 900;
+
+  letter-spacing: 6px;
+
+  box-shadow:
+    0 0 35px rgba(100, 90, 255, 0.25);
+}
+
+
+/* SMALL TITLE */
+
+.small-title {
+  margin-top: 35px;
+
+  font-size: clamp(42px, 7vw, 82px);
+
+  line-height: 1;
+
+  color: #b9b8cf;
+
+  letter-spacing: -4px;
+}
+
+
+/* HERO H1 */
+
+.hero h1 {
+  max-width: 1000px;
+
+  margin-top: 5px;
+
+  font-size: clamp(58px, 10vw, 125px);
+
+  line-height: 0.9;
+
+  letter-spacing: -7px;
+
+  font-weight: 950;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+
+/* HERO TEXT */
+
+.hero-text {
+  max-width: 700px;
+
+  margin-top: 50px;
+
+  font-size: 20px;
+
+  line-height: 1.7;
+
+  color: #d8d7e8;
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+  margin-top: 40px;
+
+  display: flex;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+}
+
+
+/* DOTS */
+
+.dots {
+  display: flex;
+
+  gap: 8px;
+
+  margin-top: 60px;
+}
+
+.dots span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #4d4c60;
+}
+
+.dots .active {
+  background: #ffffff;
+}
+
+
+/* HERO BOTTOM */
+
+.hero-bottom {
+  margin-top: 20px;
+
+  color: #8e8ca2;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.about,
+.how,
+.stats {
+  width: min(1200px, calc(100% - 48px));
+
+  margin: 0 auto;
+}
+
+.about {
+  padding: 120px 0;
+}
+
+.section-label {
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 900;
+
+  letter-spacing: 6px;
+
+  text-transform: uppercase;
+}
+
+.about h2,
+.journey h2 {
+  margin-top: 18px;
+
+  font-size: clamp(36px, 5vw, 64px);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+.section-subtitle {
+  max-width: 760px;
+
+  margin: 24px auto 0;
+
+  font-size: 20px;
+
+  line-height: 1.7;
+
+  color: #c9c8d9;
+}
+
+
+/* =====================================================
+   STEPS
+===================================================== */
+
+.steps {
+  margin-top: 60px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.step-card {
+  min-height: 280px;
+
+  padding: 32px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(28, 30, 60, 0.95),
+      rgba(12, 14, 30, 0.98)
+    );
+}
+
+.step-card > span {
+  font-size: 14px;
+
+  font-weight: 900;
+
+  color: #aaa5ff;
+
+  letter-spacing: 3px;
+}
+
+.step-card h3 {
+  margin-top: 40px;
+
+  font-size: 24px;
+}
+
+.step-card p {
+  margin-top: 16px;
+
+  color: #aaa9ba;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats {
+  padding: 80px 0 120px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+.stat-card {
+  min-height: 270px;
+
+  padding: 40px 25px;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(28, 30, 63, 0.85),
+      rgba(15, 17, 36, 0.95)
+    );
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.stat-card strong {
+  font-size: 100px;
+
+  line-height: 1;
+
+  font-weight: 900;
+}
+
+.stat-card span {
+  margin-top: 25px;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: #dddced;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+  width: min(1200px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  padding: 70px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+footer h3 {
+  font-size: 22px;
+}
+
+footer p {
+  margin-top: 10px;
+
+  color: #9f9eae;
+}
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.dashboard-page {
+  width: min(1200px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  padding: 80px 0 120px;
+
+  text-align: center;
+}
+
+.dashboard-page > .section-label {
+  margin-bottom: 20px;
+}
+
+.dashboard-page > h1 {
+  font-size: clamp(48px, 7vw, 88px);
+
+  line-height: 1;
+
+  letter-spacing: -4px;
+}
+
+.dashboard-page > .section-subtitle {
+  margin-bottom: 65px;
+}
+
+
+/* DASHBOARD GRID */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+/* DASHBOARD CARD */
+
+.dashboard-card {
+  margin-top: 40px;
+
+  padding: 65px 30px;
+
+  border-radius: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(30, 32, 66, 0.95),
+      rgba(14, 16, 35, 0.98)
+    );
+
+  text-align: center;
+}
+
+.dashboard-day-label {
+  font-weight: 900;
+
+  letter-spacing: 5px;
+
+  color: #aaa5ff;
+}
+
+.dashboard-card h2 {
+  margin-top: 25px;
+
+  font-size: 38px;
+}
+
+.dashboard-card p {
+  max-width: 650px;
+
+  margin: 20px auto 30px;
+
+  color: #c5c4d4;
+
+  line-height: 1.7;
+
+  font-size: 18px;
+}
+
+
+/* =====================================================
+   JOURNEY
+===================================================== */
+
+.journey {
+  width: 100%;
+
+  margin-top: 110px;
+
+  text-align: center;
+}
+
+.journey-heading {
+  margin-bottom: 50px;
+}
+
+.journey-heading .section-subtitle {
+  margin-bottom: 0;
+}
+
+
+/* =====================================================
+   JOURNEY GRID
+===================================================== */
+
+.journey-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 16px;
+
+  text-align: left;
+}
+
+
+/* =====================================================
+   DAY BOX
+===================================================== */
+
+.day-box {
+  min-width: 0;
+
+  min-height: 150px;
+
+  padding: 20px;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(26, 28, 57, 0.95),
+      rgba(12, 14, 30, 0.98)
+    );
+
+  text-decoration: none;
+
+  color: #ffffff;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    opacity 0.22s ease;
+}
+
+
+.day-box:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(130, 125, 255, 0.75);
+
+  box-shadow:
+    0 15px 35px rgba(80, 70, 255, 0.18);
+}
+
+
+/* =====================================================
+   DAY BOX HEADER
+===================================================== */
+
+.day-box-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+/* NUMBER CIRCLE */
+
+.day-number {
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 14px;
+
+  font-weight: 900;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+
+/* ICON */
+
+.day-icon {
+  width: 28px;
+
+  height: 28px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 13px;
+
+  font-weight: 900;
+}
+
+
+/* =====================================================
+   DAY BOX CONTENT
+===================================================== */
+
+.day-box-content h3 {
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+.day-box-content p {
+  margin-top: 6px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  opacity: 0.65;
+}
+
+
+/* =====================================================
+   COMPLETED DAY
+===================================================== */
+
+.day-box.completed {
+  border-color: rgba(120, 110, 255, 0.3);
+}
+
+.day-box.completed .day-number {
+  background: rgba(105, 95, 255, 0.18);
+
+  border-color: rgba(130, 120, 255, 0.4);
+}
+
+.completed-icon {
+  color: #aaa5ff;
+
+  background: rgba(110, 100, 255, 0.12);
+}
+
+.day-box.completed .day-box-content p {
+  color: #aaa5ff;
+
+  opacity: 1;
+}
+
+
+/* =====================================================
+   CURRENT DAY
+===================================================== */
+
+.day-box.current {
+  border-color: rgba(255, 255, 255, 0.8);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(55, 56, 105, 1),
+      rgba(25, 27, 55, 1)
+    );
+
+  box-shadow:
+    0 0 35px rgba(105, 95, 255, 0.28);
+}
+
+.day-box.current .day-number {
+  background: #ffffff;
+
+  color: #080918;
+
+  border-color: #ffffff;
+}
+
+.current-icon {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  font-size: 8px;
+}
+
+.day-box.current .day-box-content p {
+  color: #ffffff;
+
+  opacity: 1;
+}
+
+
+/* =====================================================
+   UPCOMING
+===================================================== */
+
+.day-box.upcoming {
+  opacity: 0.62;
+}
+
+.day-box.upcoming:hover {
+  opacity: 1;
+}
+
+.upcoming-icon {
+  color: #89879b;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.day-box.upcoming .day-box-content p {
+  color: #8e8c9f;
+}
+
+
+/* =====================================================
+   DAY PAGE
+===================================================== */
+
+.day-page {
+  width: min(1000px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  padding: 90px 0 120px;
+
+  text-align: center;
+}
+
+.day-page > h1 {
+  margin-top: 20px;
+
+  font-size: clamp(48px, 7vw, 80px);
+
+  line-height: 1;
+
+  letter-spacing: -4px;
+}
+
+.day-page > .section-subtitle {
+  margin-bottom: 55px;
+}
+
+
+/* =====================================================
+   DAY CARD
+===================================================== */
+
+.day-card {
+  padding: 65px 50px;
+
+  border-radius: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(30, 32, 66, 0.95),
+      rgba(14, 16, 35, 0.98)
+    );
+
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.25);
+}
+
+.day-progress {
+  font-size: 28px;
+
+  font-weight: 900;
+
+  letter-spacing: 6px;
+}
+
+.day-card > h2 {
+  margin-top: 30px;
+
+  font-size: 42px;
+}
+
+.day-card > p {
+  max-width: 750px;
+
+  margin: 20px auto;
+
+  color: #d0cfdd;
+
+  font-size: 19px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   DAY INFO
+===================================================== */
+
+.day-info {
+  margin-top: 35px;
+}
+
+.day-info h3 {
+  font-size: 22px;
+}
+
+.day-info p {
+  margin-top: 10px;
+
+  color: #c7c5d5;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   DAY MESSAGES
+===================================================== */
+
+.completed-message,
+.current-message,
+.upcoming-message {
+  margin: 35px auto 0;
+
+  width: fit-content;
+
+  padding: 14px 22px;
+
+  border-radius: 999px;
+
+  font-weight: 800;
+}
+
+.completed-message {
+  background: rgba(100, 90, 255, 0.13);
+
+  color: #aaa5ff;
+}
+
+.current-message {
+  background: rgba(255, 255, 255, 0.1);
+
+  color: #ffffff;
+}
+
+.upcoming-message {
+  background: rgba(255, 255, 255, 0.05);
+
+  color: #a09daf;
+}
+
+
+/* =====================================================
+   DAY ACTIONS
+===================================================== */
+
+.day-actions {
+  margin-top: 45px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   LARGE DESKTOP
+===================================================== */
+
+@media (min-width: 1400px) {
+
+  .journey-grid {
+    grid-template-columns:
+      repeat(6, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .navbar {
+    grid-template-columns: 1fr auto;
+
+    padding: 20px 0;
+  }
+
+  .nav-links {
+    grid-column: 1 / -1;
+
+    grid-row: 2;
+
+    width: 100%;
+  }
+
+  .join-btn {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .journey-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    width: calc(100% - 28px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    padding: 20px 0 10px;
+  }
+
+  .logo {
+    align-self: center;
+
+    font-size: 28px;
+  }
+
+  .nav-links {
+    width: 100%;
+
+    padding: 14px 10px;
+
+    gap: 18px;
+
+    border-radius: 16px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .join-btn {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 17px 20px;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    width: calc(100% - 28px);
+
+    min-height: auto;
+
+    padding: 100px 8px 80px;
+  }
+
+  .badge {
+    padding: 15px 20px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+  }
+
+  .small-title {
+    margin-top: 35px;
+
+    font-size: 40px;
+
+    letter-spacing: -2px;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+
+    letter-spacing: -4px;
+
+    line-height: 0.92;
+  }
+
+  .hero-text {
+    margin-top: 45px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .hero-buttons .primary-btn,
+  .hero-buttons .secondary-btn {
+    width: 100%;
+  }
+
+
+  /* SECTIONS */
+
+  .about,
+  .stats,
+  footer {
+    width: calc(100% - 28px);
+  }
+
+  .about {
+    padding: 80px 0;
+  }
+
+  .section-label {
+    font-size: 12px;
+
+    letter-spacing: 4px;
+  }
+
+  .about h2,
+  .journey h2 {
+    font-size: 36px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+
+
+  /* STEPS */
+
+  .step-card {
+    min-height: auto;
+
+    padding: 25px;
+  }
+
+
+  /* STATS */
+
+  .stats {
+    padding: 50px 0 80px;
+
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    min-height: 220px;
+  }
+
+  .stat-card strong {
+    font-size: 80px;
+  }
+
+  .stat-card span {
+    font-size: 18px;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 50px 0;
+  }
+
+  footer .primary-btn {
+    width: 100%;
+  }
+
+
+  /* DASHBOARD */
+
+  .dashboard-page {
+    width: calc(100% - 28px);
+
+    padding: 70px 0 90px;
+  }
+
+  .dashboard-page > h1 {
+    font-size: 48px;
+
+    letter-spacing: -3px;
+  }
+
+  .dashboard-card {
+    padding: 45px 20px;
+  }
+
+  .dashboard-card h2 {
+    font-size: 30px;
+  }
+
+
+  /* JOURNEY */
+
+  .journey {
+    margin-top: 80px;
+  }
+
+  .journey-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .day-box {
+    min-height: 130px;
+
+    padding: 15px;
+
+    border-radius: 16px;
+  }
+
+  .day-number {
+    width: 34px;
+
+    height: 34px;
+
+    font-size: 13px;
+  }
+
+  .day-box-content h3 {
+    font-size: 16px;
+  }
+
+  .day-box-content p {
+    font-size: 11px;
+  }
+
+
+  /* DAY PAGE */
+
+  .day-page {
+    width: calc(100% - 28px);
+
+    padding: 70px 0 90px;
+  }
+
+  .day-page > h1 {
+    font-size: 48px;
+
+    letter-spacing: -3px;
+  }
+
+  .day-card {
+    padding: 40px 20px;
+
+    border-radius: 22px;
+  }
+
+  .day-card > h2 {
+    font-size: 30px;
+  }
+
+  .day-card > p {
+    font-size: 16px;
+  }
+
+  .day-info p {
+    font-size: 16px;
+  }
+
+  .day-actions {
+    flex-direction: column;
+  }
+
+  .day-actions .primary-btn,
+  .day-actions .secondary-btn {
+    width: 100%;
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+  }
+
+}
+/* =====================================================
+   60 DAY JOURNEY - CURRENT JSX CARD STYLES
+   Paste this at the VERY BOTTOM of App.css
+===================================================== */
+
+.journey-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 45px;
+}
+
+/* =========================
+   DAY CARD
+========================= */
+
+.journey-day {
+  min-width: 0;
+  min-height: 155px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+
+  text-decoration: none;
+  color: #ffffff;
+
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(27, 29, 58, 0.96),
+      rgba(12, 14, 30, 0.98)
+    );
+
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease,
+    opacity 0.22s ease;
+}
+
+.journey-day:hover {
+  transform: translateY(-5px);
+  border-color: rgba(150, 145, 255, 0.7);
+  box-shadow:
+    0 15px 35px rgba(80, 70, 255, 0.18);
+}
+
+/* =========================
+   DAY NUMBER
+========================= */
+
+.journey-day .day-number {
+  width: 42px;
+  height: 42px;
+>>>>>>> chaitanya/integration
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+<<<<<<< HEAD
+  text-align: center;
+
+  padding: 80px 20px;
+
+  background: #f8fafc;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+.contact-content {
+  max-width: 650px;
+}
+
+.contact-label {
+  display: inline-block;
+
+  margin-bottom: 15px;
+
+  color: #2563eb;
+
+  font-size: 13px;
+  font-weight: 700;
+=======
+  border-radius: 50%;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* =========================
+   DAY NAME
+========================= */
+
+.journey-day .day-name {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.journey-day .day-status {
+  width: fit-content;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* =====================================================
+   COMPLETED
+===================================================== */
+
+.journey-day.completed {
+  border-color: rgba(60, 220, 150, 0.35);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20, 65, 55, 0.92),
+      rgba(12, 30, 32, 0.98)
+    );
+}
+
+.journey-day.completed:hover {
+  border-color: rgba(80, 240, 170, 0.7);
+
+  box-shadow:
+    0 15px 35px rgba(30, 220, 145, 0.14);
+}
+
+.journey-day.completed .day-number {
+  color: #69f0b0;
+
+  background: rgba(50, 220, 145, 0.15);
+  border-color: rgba(70, 230, 155, 0.35);
+}
+
+.journey-day.completed .day-status {
+  color: #69f0b0;
+  background: rgba(50, 220, 145, 0.13);
+}
+
+/* =====================================================
+   CURRENT
+===================================================== */
+
+.journey-day.current {
+  position: relative;
+
+  border-color: rgba(150, 135, 255, 0.9);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(67, 57, 125, 0.98),
+      rgba(29, 25, 68, 0.98)
+    );
+
+  box-shadow:
+    0 0 0 1px rgba(140, 125, 255, 0.18),
+    0 0 35px rgba(110, 90, 255, 0.3);
+}
+
+.journey-day.current:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(190, 180, 255, 1);
+
+  box-shadow:
+    0 0 0 1px rgba(170, 155, 255, 0.3),
+    0 0 45px rgba(110, 90, 255, 0.42);
+}
+
+.journey-day.current .day-number {
+  color: #17132e;
+
+  background: #ffffff;
+
+  border-color: #ffffff;
+
+  box-shadow:
+    0 0 18px rgba(255, 255, 255, 0.3);
+}
+
+.journey-day.current .day-status {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+/* CURRENT BADGE */
+
+.journey-day.current::before {
+  content: "CURRENT DAY";
+
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  padding: 5px 8px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+/* =====================================================
+   UPCOMING
+===================================================== */
+
+.journey-day.upcoming {
+  opacity: 0.55;
+
+  border-color: rgba(255, 255, 255, 0.09);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(22, 23, 42, 0.8),
+      rgba(10, 11, 24, 0.9)
+    );
+}
+
+.journey-day.upcoming:hover {
+  opacity: 0.9;
+
+  border-color: rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.journey-day.upcoming .day-number {
+  color: #858394;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.journey-day.upcoming .day-name {
+  color: #aaa8b8;
+}
+
+.journey-day.upcoming .day-status {
+  color: #858394;
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* =====================================================
+   DASHBOARD CARD
+===================================================== */
+
+.dashboard-card {
+  text-align: center;
+}
+
+.dashboard-card > span {
+  display: inline-block;
+
+  padding: 7px 13px;
+
+  border-radius: 999px;
+
+  color: #aaa0ff;
+
+  background: rgba(110, 95, 255, 0.12);
+
+  font-size: 12px;
+  font-weight: 900;
+>>>>>>> chaitanya/integration
+
+  letter-spacing: 2px;
+}
+
+<<<<<<< HEAD
+.contact h2 {
+  margin-bottom: 20px;
+
+  font-size: 48px;
+
+  color: #111827;
+}
+
+.contact p {
+  margin-bottom: 30px;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: #667085;
+}
+
+
+/* ===== EMAIL BUTTON ===== */
+
+.contact-button {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  border-radius: 8px;
+
+  background: #111827;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: 450px;
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    letter-spacing: -1px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .about h2 {
+    font-size: 32px;
+  }
+
+  .contact {
+    min-height: 380px;
+    padding: 60px 20px;
+  }
+
+  .contact h2 {
+    font-size: 38px;
+  }
+
+  .contact p {
+    font-size: 16px;
+=======
+/* =====================================================
+   DAY PAGE STATUS BADGES
+===================================================== */
+
+.current-badge,
+.completed-badge,
+.upcoming-badge {
+  width: fit-content;
+
+  margin: 28px auto 0;
+
+  padding: 12px 18px;
+
+  border-radius: 999px;
+
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.current-badge {
+  color: #ffffff;
+
+  background: rgba(110, 90, 255, 0.18);
+
+  border: 1px solid rgba(150, 135, 255, 0.4);
+}
+
+.completed-badge {
+  color: #69f0b0;
+
+  background: rgba(50, 220, 145, 0.12);
+
+  border: 1px solid rgba(70, 230, 155, 0.3);
+}
+
+.upcoming-badge {
+  color: #9996a8;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.current-day-area,
+.completed-area,
+.upcoming-area {
+  margin-top: 30px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (min-width: 1400px) {
+  .journey-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .journey-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .journey-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .journey-day {
+    min-height: 135px;
+    padding: 15px;
+    border-radius: 17px;
+  }
+
+  .journey-day .day-number {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  .journey-day .day-name {
+    font-size: 15px;
+  }
+
+  .journey-day .day-status {
+    font-size: 9px;
+    padding: 5px 8px;
+  }
+
+  .journey-day.current::before {
+    top: 9px;
+    right: 9px;
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 380px) {
+  .journey-grid {
+    grid-template-columns: 1fr;
+>>>>>>> chaitanya/integration
+  }
+}

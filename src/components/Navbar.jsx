@@ -11,6 +11,10 @@ function Navbar() {
     window.location.href = "/#contact";
   };
 
+  const goDashboard = () => {
+    window.location.href = "/dashboard";
+  };
+
   return (
     <nav className="navbar">
       <a
@@ -43,6 +47,16 @@ function Navbar() {
           }}
         >
           About
+        </a>
+
+        <a
+          href="/dashboard"
+          onClick={(e) => {
+            e.preventDefault();
+            goDashboard();
+          }}
+        >
+          Dashboard
         </a>
 
         <a
