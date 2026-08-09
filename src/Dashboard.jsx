@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "./Dashboard.css";
 
 function Dashboard() {
+  const [completed, setCompleted] = useState(false);
+
   return (
     <div className="dashboard">
       <h1>Your 60-Day Challenge</h1>
@@ -14,6 +17,13 @@ function Dashboard() {
         <div className="card">
           <h2>📅 Today's Task</h2>
           <p>Complete Day 12 Challenge</p>
+
+          <button
+            className="complete-btn"
+            onClick={() => setCompleted(true)}
+          >
+            {completed ? "Task Completed ✅" : "Complete Task"}
+          </button>
         </div>
 
         <div className="card">
