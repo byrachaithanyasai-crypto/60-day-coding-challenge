@@ -1,11 +1,9 @@
-/* =========================================================
-   GLOBAL
-========================================================= */
+/* ===== GLOBAL ===== */
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -13,447 +11,122 @@ html {
 }
 
 body {
-  min-width: 320px;
-  background: #050716;
-  color: #ffffff;
-  font-family: Inter, Arial, sans-serif;
-}
-
-button,
-a {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-a {
-  color: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #111827;
 }
 
 
-/* =========================================================
-   APP / PAGE
-========================================================= */
-
-.app,
-.page {
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
-
-  background:
-    radial-gradient(
-      circle at 50% 25%,
-      rgba(82, 91, 255, 0.22),
-      transparent 35%
-    ),
-    radial-gradient(
-      circle at 50% 70%,
-      rgba(30, 75, 255, 0.12),
-      transparent 40%
-    ),
-    #050716;
-}
-
-
-/* =========================================================
-   NAVBAR
-========================================================= */
+/* ===== NAVBAR ===== */
 
 .navbar {
-  width: min(1250px, calc(100% - 48px));
-  min-height: 90px;
-  margin: 0 auto;
-  padding: 25px 0;
-
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  height: 72px;
+  width: 100%;
+  display: flex;
   align-items: center;
-
-  gap: 30px;
+  justify-content: space-between;
+  padding: 0 8%;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
 }
 
 .logo {
-  justify-self: start;
-
-  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
   text-decoration: none;
-
-  font-size: 32px;
-  font-weight: 900;
-  letter-spacing: -1.5px;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-
-  padding: 6px;
-
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 18px;
+  gap: 32px;
 }
 
 .nav-links a {
-  color: #d9d9e8;
   text-decoration: none;
-
-  padding: 10px 16px;
-  border-radius: 10px;
-
+  color: #374151;
   font-size: 15px;
-  font-weight: 700;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    opacity 0.2s ease;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.join-btn {
-  justify-self: end;
-
-  padding: 18px 28px;
-
-  color: #070814;
-  background: #ffffff;
-
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 16px;
-
-  text-decoration: none;
-  font-weight: 800;
-
-  box-shadow: 0 0 30px rgba(110, 100, 255, 0.16);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.join-btn:hover {
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 0 40px rgba(110, 100, 255, 0.3);
+  color: #2563eb;
 }
 
 
-/* =========================================================
-   BUTTONS
-========================================================= */
-
-.primary-btn,
-.secondary-btn {
-  min-height: 56px;
-
-  padding: 0 28px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 16px;
-
-  text-decoration: none;
-  font-weight: 800;
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.primary-btn {
-  color: #070814;
-  background: #ffffff;
-
-  border: none;
-
-  box-shadow:
-    0 0 35px rgba(110, 100, 255, 0.2);
-}
-
-.primary-btn:hover {
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 0 45px rgba(110, 100, 255, 0.35);
-}
-
-.secondary-btn {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.03);
-
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.secondary-btn:hover {
-  transform: translateY(-3px);
-
-  border-color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.07);
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
+/* ===== HERO ===== */
 
 .hero {
-  width: min(1100px, calc(100% - 40px));
-  min-height: 700px;
-
-  margin: 0 auto;
-  padding: 170px 20px 100px;
-
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  justify-content: center;
   text-align: center;
-}
 
-.badge {
-  padding: 18px 38px;
+  padding: 80px 20px;
 
-  color: #ffffff;
-
-  border: 1px solid #7068ff;
-  border-radius: 999px;
-
-  font-size: 16px;
-  font-weight: 900;
-  letter-spacing: 6px;
-
-  box-shadow:
-    0 0 35px rgba(100, 90, 255, 0.25);
-}
-
-.small-title {
-  margin-top: 35px;
-
-  color: #b9b8cf;
-
-  font-size: clamp(42px, 7vw, 82px);
-  line-height: 1;
-  letter-spacing: -4px;
+  background: linear-gradient(
+    180deg,
+    #eaf4ff 0%,
+    #f8fbff 55%,
+    #ffffff 100%
+  );
 }
 
 .hero h1 {
-  max-width: 1000px;
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
 
-  margin-top: 5px;
+  background: linear-gradient(
+    90deg,
+    #111827,
+    #2563eb
+  );
 
-  color: #ffffff;
-
-  font-size: clamp(58px, 10vw, 125px);
-  line-height: 0.9;
-  letter-spacing: -7px;
-  font-weight: 950;
-
-  text-shadow:
-    0 0 30px rgba(255, 255, 255, 0.1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.hero-text {
+.hero p {
   max-width: 700px;
-
-  margin-top: 50px;
-
-  color: #d8d7e8;
-
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.7;
+  color: #667085;
+  margin-bottom: 32px;
 }
 
-.hero-buttons {
-  margin-top: 40px;
+.hero button {
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
 
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-
-  flex-wrap: wrap;
-}
-
-.dots {
-  display: flex;
-  gap: 8px;
-
-  margin-top: 60px;
-}
-
-.dots span {
-  width: 7px;
-  height: 7px;
-
-  border-radius: 50%;
-
-  background: #4d4c60;
-}
-
-.dots .active {
-  background: #ffffff;
-}
-
-.hero-bottom {
-  margin-top: 20px;
-
-  color: #8e8ca2;
-
-  font-size: 16px;
-}
-
-
-/* =========================================================
-   COMMON SECTIONS
-========================================================= */
-
-.about,
-.how,
-.stats {
-  width: min(1200px, calc(100% - 48px));
-  margin: 0 auto;
-}
-
-.section-label {
+  background: #2563eb;
   color: #ffffff;
 
   font-size: 15px;
-  font-weight: 900;
-  letter-spacing: 6px;
-  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
 }
 
-.section-subtitle {
-  max-width: 760px;
-
-  margin: 24px auto 0;
-
-  color: #c9c8d9;
-
-  font-size: 20px;
-  line-height: 1.7;
+.hero button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
 }
 
 
-/* =========================================================
-   ABOUT
-========================================================= */
+/* ===== ABOUT ===== */
 
 .about {
-  padding: 120px 0;
-  text-align: center;
-}
-
-.about h2,
-.journey h2 {
-  margin-top: 18px;
-
-  color: #ffffff;
-
-  font-size: clamp(36px, 5vw, 64px);
-  line-height: 1.05;
-  letter-spacing: -2px;
-}
-
-
-/* =========================================================
-   STEPS
-========================================================= */
-
-.steps {
-  margin-top: 60px;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 18px;
-}
-
-.step-card {
-  min-height: 280px;
-
-  padding: 32px;
-
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 22px;
-
-  background: rgba(255, 255, 255, 0.04);
-
-  text-align: left;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    border-color 0.3s ease;
-}
-
-.step-card:hover {
-  transform: translateY(-5px);
-
-  background: rgba(255, 255, 255, 0.07);
-
-  border-color: rgba(255, 255, 255, 0.4);
-}
-
-.step-card > span {
-  color: #aaa5ff;
-
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 3px;
-}
-
-.step-card h3 {
-  margin-top: 40px;
-
-  color: #ffffff;
-
-  font-size: 24px;
-}
-
-.step-card p {
-  margin-top: 16px;
-
-  color: #aaa9ba;
-
-  line-height: 1.7;
-}
-
-
-/* =========================================================
-   STATS
-========================================================= */
-
-.stats {
-  margin-top: 20px;
-  margin-bottom: 160px;
-
-  padding: 0 25px;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 24px;
-}
-
-.stat-card {
-  min-height: 270px;
-
-  padding: 40px 25px;
+  min-height: 320px;
 
   display: flex;
   flex-direction: column;
@@ -462,1311 +135,153 @@ a {
 
   text-align: center;
 
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 24px;
+  padding: 70px 20px;
 
-  background: rgba(255, 255, 255, 0.04);
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
+  background: #ffffff;
 }
 
-.stat-card:hover {
-  transform: translateY(-5px);
-
-  background: rgba(255, 255, 255, 0.07);
-}
-
-.stat-card strong {
-  color: #ffffff;
-
-  font-size: 100px;
-  line-height: 1;
-  font-weight: 900;
-}
-
-.stat-card span {
-  margin-top: 25px;
-
-  color: #dddced;
-
-  font-size: 22px;
+.about h2 {
+  font-size: 38px;
   font-weight: 700;
+
+  margin-bottom: 20px;
+
+  color: #111827;
+}
+
+.about p {
+  max-width: 700px;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  color: #6b7280;
 }
 
 
-/* =========================================================
-   HOW IT WORKS
-========================================================= */
+/* ===== CONTACT ===== */
 
-.how {
-  padding: 100px 25px 180px;
-
-  text-align: center;
-}
-
-.how h2 {
-  margin-top: 25px;
-
-  color: #ffffff;
-
-  font-size: clamp(45px, 6vw, 75px);
-  letter-spacing: -3px;
-}
-
-.how-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 25px;
-
-  margin-top: 60px;
-
-  text-align: left;
-}
-
-.how-card {
-  min-height: 260px;
-
-  padding: 35px;
-
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 18px;
-
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.how-card > span {
-  color: #aaa5ff;
-
-  font-size: 14px;
-  font-weight: 900;
-}
-
-.how-card h3 {
-  margin-top: 40px;
-
-  color: #ffffff;
-
-  font-size: 26px;
-}
-
-.how-card p {
-  margin-top: 15px;
-
-  color: #c9cad6;
-
-  line-height: 1.6;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer {
-  width: min(1200px, calc(100% - 48px));
-
-  margin: 0 auto;
-  padding: 60px 25px 80px;
+.contact {
+  min-height: 420px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  gap: 30px;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-footer h3 {
-  color: #ffffff;
-
-  font-size: 22px;
-}
-
-footer p {
-  margin-top: 10px;
-
-  color: #9f9eae;
-}
-
-
-/* =========================================================
-   DASHBOARD
-========================================================= */
-
-.dashboard-page {
-  width: min(1200px, calc(100% - 48px));
-
-  margin: 0 auto;
-  padding: 80px 0 120px;
-
-  color: #ffffff;
+  justify-content: center;
 
   text-align: center;
+
+  padding: 80px 20px;
+
+  background: #f8fafc;
+
+  border-top: 1px solid #e5e7eb;
 }
 
-.dashboard-page > .section-label {
-  margin-bottom: 20px;
-
-  color: #ffffff;
+.contact-content {
+  max-width: 650px;
 }
 
-.dashboard-page > h1 {
-  margin-top: 0;
-
-  color: #ffffff;
-
-  font-size: clamp(48px, 7vw, 88px);
-  line-height: 1;
-  letter-spacing: -4px;
-  font-weight: 900;
-
-  text-shadow:
-    0 0 25px rgba(255, 255, 255, 0.08);
-}
-
-.dashboard-page > .section-subtitle {
-  margin-bottom: 65px;
-
-  color: #cfd0dd;
-}
-
-
-/* =========================================================
-   DASHBOARD GRID
-========================================================= */
-
-.dashboard-grid {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 24px;
-}
-
-
-/* =========================================================
-   DASHBOARD CARD
-========================================================= */
-
-.dashboard-card {
-  margin-top: 40px;
-
-  padding: 65px 30px;
-
-  border-radius: 28px;
-
-  border: 1px solid rgba(255, 255, 255, 0.2);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(30, 32, 66, 0.95),
-      rgba(14, 16, 35, 0.98)
-    );
-
-  text-align: center;
-}
-
-.dashboard-card > span {
+.contact-label {
   display: inline-block;
 
-  padding: 7px 13px;
+  margin-bottom: 15px;
 
-  border-radius: 999px;
+  color: #2563eb;
 
-  color: #aaa0ff;
+  font-size: 13px;
+  font-weight: 700;
 
-  background: rgba(110, 95, 255, 0.12);
-
-  font-size: 12px;
-  font-weight: 900;
   letter-spacing: 2px;
 }
 
-.dashboard-day-label {
-  color: #aaa5ff;
+.contact h2 {
+  margin-bottom: 20px;
 
-  font-weight: 900;
-  letter-spacing: 5px;
+  font-size: 48px;
+
+  color: #111827;
 }
 
-.dashboard-card h2 {
-  margin-top: 25px;
+.contact p {
+  margin-bottom: 30px;
 
-  color: #ffffff;
-
-  font-size: 38px;
-}
-
-.dashboard-card p {
-  max-width: 650px;
-
-  margin: 20px auto 30px;
-
-  color: #c5c4d4;
-
-  line-height: 1.7;
   font-size: 18px;
+  line-height: 1.7;
+
+  color: #667085;
 }
 
 
-/* =========================================================
-   JOURNEY
-========================================================= */
+/* ===== EMAIL BUTTON ===== */
 
-.journey {
-  width: 100%;
+.contact-button {
+  display: inline-block;
 
-  margin-top: 110px;
+  padding: 14px 28px;
 
-  text-align: center;
-}
+  border-radius: 8px;
 
-.journey-heading {
-  margin-bottom: 50px;
-}
-
-.journey-heading .section-subtitle {
-  margin-bottom: 0;
-}
-
-
-/* =========================================================
-   JOURNEY GRID
-========================================================= */
-
-.journey-grid {
-  width: 100%;
-
-  display: grid;
-
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-
-  gap: 16px;
-
-  margin-top: 45px;
-
-  text-align: left;
-}
-
-
-/* =========================================================
-   JOURNEY DAY CARD
-========================================================= */
-
-.journey-day {
-  position: relative;
-
-  min-width: 0;
-  min-height: 155px;
-
-  padding: 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  gap: 12px;
-
+  background: #111827;
   color: #ffffff;
 
   text-decoration: none;
 
-  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
 
-  border: 1px solid rgba(255, 255, 255, 0.14);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(27, 29, 58, 0.96),
-      rgba(12, 14, 30, 0.98)
-    );
-
-  transition:
-    transform 0.22s ease,
-    border-color 0.22s ease,
-    box-shadow 0.22s ease,
-    background 0.22s ease,
-    opacity 0.22s ease;
+  transition: all 0.3s ease;
 }
 
-.journey-day:hover {
-  transform: translateY(-5px);
-
-  border-color: rgba(150, 145, 255, 0.7);
-
-  box-shadow:
-    0 15px 35px rgba(80, 70, 255, 0.18);
+.contact-button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
 }
 
 
-/* =========================================================
-   DAY NUMBER
-========================================================= */
+/* ===== MOBILE ===== */
 
-.journey-day .day-number {
-  width: 42px;
-  height: 42px;
+@media (max-width: 768px) {
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  color: #ffffff;
-
-  font-size: 14px;
-  font-weight: 900;
-
-  background: rgba(255, 255, 255, 0.08);
-
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-
-/* =========================================================
-   DAY NAME
-========================================================= */
-
-.journey-day .day-name {
-  color: #ffffff;
-
-  font-size: 18px;
-  font-weight: 800;
-}
-
-
-/* =========================================================
-   DAY STATUS
-========================================================= */
-
-.journey-day .day-status {
-  width: fit-content;
-
-  padding: 6px 10px;
-
-  border-radius: 999px;
-
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-}
-
-
-/* =========================================================
-   COMPLETED DAY
-========================================================= */
-
-.journey-day.completed {
-  border-color: rgba(60, 220, 150, 0.35);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(20, 65, 55, 0.92),
-      rgba(12, 30, 32, 0.98)
-    );
-}
-
-.journey-day.completed:hover {
-  border-color: rgba(80, 240, 170, 0.7);
-
-  box-shadow:
-    0 15px 35px rgba(30, 220, 145, 0.14);
-}
-
-.journey-day.completed .day-number {
-  color: #69f0b0;
-
-  background: rgba(50, 220, 145, 0.15);
-
-  border-color: rgba(70, 230, 155, 0.35);
-}
-
-.journey-day.completed .day-status {
-  color: #69f0b0;
-
-  background: rgba(50, 220, 145, 0.13);
-}
-
-
-/* =========================================================
-   CURRENT DAY
-========================================================= */
-
-.journey-day.current {
-  border-color: rgba(150, 135, 255, 0.9);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(67, 57, 125, 0.98),
-      rgba(29, 25, 68, 0.98)
-    );
-
-  box-shadow:
-    0 0 0 1px rgba(140, 125, 255, 0.18),
-    0 0 35px rgba(110, 90, 255, 0.3);
-}
-
-.journey-day.current:hover {
-  transform: translateY(-6px);
-
-  border-color: rgba(190, 180, 255, 1);
-
-  box-shadow:
-    0 0 0 1px rgba(170, 155, 255, 0.3),
-    0 0 45px rgba(110, 90, 255, 0.42);
-}
-
-.journey-day.current .day-number {
-  color: #17132e;
-
-  background: #ffffff;
-
-  border-color: #ffffff;
-
-  box-shadow:
-    0 0 18px rgba(255, 255, 255, 0.3);
-}
-
-.journey-day.current .day-status {
-  color: #ffffff;
-
-  background: rgba(255, 255, 255, 0.13);
-
-  border: 1px solid rgba(255, 255, 255, 0.22);
-}
-
-.journey-day.current::before {
-  content: "CURRENT DAY";
-
-  position: absolute;
-
-  top: 12px;
-  right: 12px;
-
-  padding: 5px 8px;
-
-  border-radius: 999px;
-
-  color: #ffffff;
-
-  background: rgba(255, 255, 255, 0.12);
-
-  font-size: 8px;
-  font-weight: 900;
-  letter-spacing: 1px;
-}
-
-
-/* =========================================================
-   UPCOMING DAY
-========================================================= */
-
-.journey-day.upcoming {
-  opacity: 0.55;
-
-  border-color: rgba(255, 255, 255, 0.09);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(22, 23, 42, 0.8),
-      rgba(10, 11, 24, 0.9)
-    );
-}
-
-.journey-day.upcoming:hover {
-  opacity: 0.9;
-
-  border-color: rgba(255, 255, 255, 0.25);
-
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.journey-day.upcoming .day-number {
-  color: #858394;
-
-  background: rgba(255, 255, 255, 0.04);
-
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-.journey-day.upcoming .day-name {
-  color: #aaa8b8;
-}
-
-.journey-day.upcoming .day-status {
-  color: #858394;
-
-  background: rgba(255, 255, 255, 0.04);
-}
-
-
-/* =========================================================
-   OLD DAY BOX SUPPORT
-========================================================= */
-
-.day-box {
-  min-width: 0;
-  min-height: 150px;
-
-  padding: 20px;
-
-  border-radius: 20px;
-
-  border: 1px solid rgba(255, 255, 255, 0.16);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(26, 28, 57, 0.95),
-      rgba(12, 14, 30, 0.98)
-    );
-
-  text-decoration: none;
-
-  color: #ffffff;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  transition:
-    transform 0.22s ease,
-    border-color 0.22s ease,
-    box-shadow 0.22s ease,
-    opacity 0.22s ease;
-}
-
-.day-box:hover {
-  transform: translateY(-5px);
-
-  border-color: rgba(130, 125, 255, 0.75);
-
-  box-shadow:
-    0 15px 35px rgba(80, 70, 255, 0.18);
-}
-
-.day-box-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.day-box-content h3 {
-  color: #ffffff;
-
-  font-size: 18px;
-  font-weight: 800;
-}
-
-.day-box-content p {
-  margin-top: 6px;
-
-  color: #aaa8b8;
-
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
-.day-icon {
-  width: 28px;
-  height: 28px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  font-size: 13px;
-  font-weight: 900;
-}
-
-
-/* =========================================================
-   DAY PAGE
-========================================================= */
-
-.day-page {
-  width: min(1000px, calc(100% - 48px));
-
-  margin: 0 auto;
-
-  padding: 90px 0 120px;
-
-  text-align: center;
-}
-
-.day-page > h1 {
-  margin-top: 20px;
-
-  color: #ffffff;
-
-  font-size: clamp(48px, 7vw, 80px);
-  line-height: 1;
-  letter-spacing: -4px;
-}
-
-.day-page > .section-subtitle {
-  margin-bottom: 55px;
-}
-
-
-/* =========================================================
-   DAY CARD
-========================================================= */
-
-.day-card {
-  padding: 65px 50px;
-
-  border-radius: 28px;
-
-  border: 1px solid rgba(255, 255, 255, 0.2);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(30, 32, 66, 0.95),
-      rgba(14, 16, 35, 0.98)
-    );
-
-  box-shadow:
-    0 20px 70px rgba(0, 0, 0, 0.25);
-}
-
-.day-progress {
-  color: #ffffff;
-
-  font-size: 28px;
-  font-weight: 900;
-  letter-spacing: 6px;
-}
-
-.day-card > h2 {
-  margin-top: 30px;
-
-  color: #ffffff;
-
-  font-size: 42px;
-}
-
-.day-card > p {
-  max-width: 750px;
-
-  margin: 20px auto;
-
-  color: #d0cfdd;
-
-  font-size: 19px;
-  line-height: 1.7;
-}
-
-
-/* =========================================================
-   DAY INFO
-========================================================= */
-
-.day-info {
-  margin-top: 35px;
-}
-
-.day-info h3 {
-  color: #ffffff;
-
-  font-size: 22px;
-}
-
-.day-info p {
-  margin-top: 10px;
-
-  color: #c7c5d5;
-
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-
-/* =========================================================
-   DAY MESSAGES
-========================================================= */
-
-.completed-message,
-.current-message,
-.upcoming-message {
-  width: fit-content;
-
-  margin: 35px auto 0;
-
-  padding: 14px 22px;
-
-  border-radius: 999px;
-
-  font-weight: 800;
-}
-
-.completed-message {
-  color: #aaa5ff;
-
-  background: rgba(100, 90, 255, 0.13);
-}
-
-.current-message {
-  color: #ffffff;
-
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.upcoming-message {
-  color: #a09daf;
-
-  background: rgba(255, 255, 255, 0.05);
-}
-
-
-/* =========================================================
-   DAY STATUS BADGES
-========================================================= */
-
-.current-badge,
-.completed-badge,
-.upcoming-badge {
-  width: fit-content;
-
-  margin: 28px auto 0;
-
-  padding: 12px 18px;
-
-  border-radius: 999px;
-
-  font-size: 14px;
-  font-weight: 800;
-}
-
-.current-badge {
-  color: #ffffff;
-
-  background: rgba(110, 90, 255, 0.18);
-
-  border: 1px solid rgba(150, 135, 255, 0.4);
-}
-
-.completed-badge {
-  color: #69f0b0;
-
-  background: rgba(50, 220, 145, 0.12);
-
-  border: 1px solid rgba(70, 230, 155, 0.3);
-}
-
-.upcoming-badge {
-  color: #9996a8;
-
-  background: rgba(255, 255, 255, 0.05);
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.current-day-area,
-.completed-area,
-.upcoming-area {
-  margin-top: 30px;
-}
-
-
-/* =========================================================
-   DAY ACTIONS
-========================================================= */
-
-.day-actions {
-  margin-top: 45px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  gap: 14px;
-
-  flex-wrap: wrap;
-}
-
-
-/* =========================================================
-   LARGE DESKTOP
-========================================================= */
-
-@media (min-width: 1400px) {
-  .journey-grid {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1000px) {
   .navbar {
-    grid-template-columns: 1fr auto;
-
-    padding: 20px 0;
+    padding: 0 5%;
   }
 
   .nav-links {
-    grid-column: 1 / -1;
-    grid-row: 2;
-
-    width: 100%;
-  }
-
-  .join-btn {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .steps,
-  .stats,
-  .dashboard-grid,
-  .how-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .journey-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 700px) {
-  .navbar {
-    width: calc(100% - 28px);
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 18px;
-
-    padding: 20px 0 10px;
-  }
-
-  .logo {
-    width: 100%;
-
-    align-self: center;
-
-    text-align: center;
-
-    font-size: 28px;
-  }
-
-  .nav-links {
-    width: 100%;
-
-    padding: 14px 10px;
-
-    gap: 10px;
-
-    border-radius: 16px;
+    gap: 16px;
   }
 
   .nav-links a {
-    padding: 9px 10px;
-
-    font-size: 13px;
+    font-size: 14px;
   }
-
-  .join-btn {
-    width: 100%;
-
-    text-align: center;
-
-    padding: 17px 20px;
-  }
-
-
-  /* HERO */
 
   .hero {
-    width: calc(100% - 28px);
-
-    min-height: auto;
-
-    padding: 100px 8px 80px;
-  }
-
-  .badge {
-    padding: 15px 20px;
-
-    font-size: 11px;
-    letter-spacing: 3px;
-  }
-
-  .small-title {
-    margin-top: 35px;
-
-    font-size: 40px;
-
-    letter-spacing: -2px;
+    min-height: 450px;
+    padding: 60px 20px;
   }
 
   .hero h1 {
-    font-size: 58px;
-
-    letter-spacing: -4px;
-
-    line-height: 0.92;
+    font-size: 42px;
+    letter-spacing: -1px;
   }
 
-  .hero-text {
-    margin-top: 45px;
-
-    font-size: 16px;
-    line-height: 1.7;
-  }
-
-  .hero-buttons {
-    width: 100%;
-
-    flex-direction: column;
-  }
-
-  .hero-buttons .primary-btn,
-  .hero-buttons .secondary-btn {
-    width: 100%;
-  }
-
-
-  /* SECTIONS */
-
-  .about,
-  .stats,
-  footer {
-    width: calc(100% - 28px);
-  }
-
-  .about {
-    padding: 80px 0;
-  }
-
-  .section-label {
-    font-size: 12px;
-
-    letter-spacing: 4px;
-  }
-
-  .about h2,
-  .journey h2,
-  .how h2 {
-    font-size: 36px;
-  }
-
-  .section-subtitle {
+  .hero p {
     font-size: 16px;
   }
 
-
-  /* STEPS */
-
-  .step-card {
-    min-height: auto;
-
-    padding: 25px;
-  }
-
-
-  /* STATS */
-
-  .stats {
-    padding: 50px 0 80px;
-
-    grid-template-columns: 1fr;
-  }
-
-  .stat-card {
-    min-height: 220px;
-  }
-
-  .stat-card strong {
-    font-size: 80px;
-  }
-
-  .stat-card span {
-    font-size: 18px;
-  }
-
-
-  /* HOW */
-
-  .how {
-    padding: 80px 18px 100px;
-  }
-
-  .how-grid {
-    grid-template-columns: 1fr;
-  }
-
-
-  /* FOOTER */
-
-  footer {
-    flex-direction: column;
-
-    align-items: flex-start;
-
-    padding: 50px 0;
-  }
-
-  footer .primary-btn {
-    width: 100%;
-  }
-
-
-  /* DASHBOARD */
-
-  .dashboard-page {
-    width: calc(100% - 28px);
-
-    padding: 70px 0 90px;
-  }
-
-  .dashboard-page > h1 {
-    font-size: 48px;
-
-    letter-spacing: -3px;
-  }
-
-  .dashboard-card {
-    padding: 45px 20px;
-  }
-
-  .dashboard-card h2 {
-    font-size: 30px;
-  }
-
-
-  /* JOURNEY */
-
-  .journey {
-    margin-top: 80px;
-  }
-
-  .journey-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 12px;
-
-    margin-top: 30px;
-  }
-
-  .journey-day {
-    min-height: 135px;
-
-    padding: 15px;
-
-    border-radius: 17px;
-  }
-
-  .journey-day .day-number {
-    width: 36px;
-    height: 36px;
-
-    font-size: 12px;
-  }
-
-  .journey-day .day-name {
-    font-size: 15px;
-  }
-
-  .journey-day .day-status {
-    padding: 5px 8px;
-
-    font-size: 9px;
-  }
-
-  .journey-day.current::before {
-    top: 9px;
-    right: 9px;
-
-    font-size: 7px;
-  }
-
-
-  /* OLD DAY BOX */
-
-  .day-box {
-    min-height: 130px;
-
-    padding: 15px;
-
-    border-radius: 16px;
-  }
-
-  .day-box-content h3 {
-    font-size: 16px;
-  }
-
-  .day-box-content p {
-    font-size: 11px;
-  }
-
-
-  /* DAY PAGE */
-
-  .day-page {
-    width: calc(100% - 28px);
-
-    padding: 70px 0 90px;
-  }
-
-  .day-page > h1 {
-    font-size: 48px;
-
-    letter-spacing: -3px;
-  }
-
-  .day-card {
-    padding: 40px 20px;
-
-    border-radius: 22px;
-  }
-
-  .day-card > h2 {
-    font-size: 30px;
-  }
-
-  .day-card > p {
-    font-size: 16px;
-  }
-
-  .day-info p {
-    font-size: 16px;
-  }
-
-  .day-actions {
-    flex-direction: column;
-  }
-
-  .day-actions .primary-btn,
-  .day-actions .secondary-btn {
-    width: 100%;
-  }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 500px) {
-  .navbar {
-    padding: 20px 15px;
-  }
-
-  .nav-links {
-    width: 100%;
-
-    justify-content: center;
-  }
-
-  .nav-links a {
-    padding: 9px 10px;
-
-    font-size: 13px;
-  }
-
-  .hero {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .badge {
-    padding: 10px 16px;
-
-    font-size: 11px;
-    letter-spacing: 1.5px;
-  }
-
-  .small-title {
+  .about h2 {
     font-size: 32px;
   }
 
-  .hero h1 {
-    font-size: 46px;
+  .contact {
+    min-height: 380px;
+    padding: 60px 20px;
   }
 
-  .hero-text {
+  .contact h2 {
+    font-size: 38px;
+  }
+
+  .contact p {
     font-size: 16px;
-  }
-
-  .about,
-  .how {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .about h2,
-  .how h2 {
-    font-size: 42px;
-  }
-
-  .section-subtitle {
-    font-size: 16px;
-  }
-
-  .stats {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .stat-card {
-    min-height: 180px;
-  }
-
-  footer {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .day-card {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-
-/* =========================================================
-   VERY SMALL MOBILE
-========================================================= */
-
-@media (max-width: 380px) {
-  .journey-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 50px;
-  }
-
-  .nav-links {
-    gap: 8px;
-  }
-
-  .nav-links a {
-    font-size: 12px;
   }
 }
