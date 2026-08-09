@@ -116,18 +116,25 @@ function Navbar() {
 
       <div className="nav-links">
         <Link to="/">Home</Link>
-        <Link to="/dashboard">Dashboard</Link>
+
+        <Link to="/dashboard">
+          Dashboard
+        </Link>
 
         <Link to={`/day/${currentDay}`}>
           Day {currentDay}
         </Link>
 
-        <Link to="/day12">
+        {/* DAY 12 CUSTOM PAGE */}
+        <Link to="/day/12">
           Day 12
         </Link>
       </div>
 
-      <Link to="/dashboard" className="join-btn">
+      <Link
+        to="/dashboard"
+        className="join-btn"
+      >
         Join the challenge →
       </Link>
     </nav>
@@ -167,7 +174,9 @@ function Home() {
         <div className="hero-buttons">
           <button
             className="primary-btn"
-            onClick={() => navigate("/dashboard")}
+            onClick={() =>
+              navigate("/dashboard")
+            }
           >
             Start the challenge →
           </button>
@@ -193,7 +202,10 @@ function Home() {
         </p>
       </section>
 
-      <section className="how about" id="how">
+      <section
+        className="how about"
+        id="how"
+      >
         <p className="section-label">
           ABOUT ABTALKS
         </p>
@@ -212,7 +224,11 @@ function Home() {
         <div className="steps">
           <div className="step-card">
             <span>01</span>
-            <h3>Learn by building</h3>
+
+            <h3>
+              Learn by building
+            </h3>
+
             <p>
               Stop waiting to become perfect.
               Learn through real projects and improve
@@ -222,7 +238,11 @@ function Home() {
 
           <div className="step-card">
             <span>02</span>
-            <h3>Build in public</h3>
+
+            <h3>
+              Build in public
+            </h3>
+
             <p>
               Share your journey, progress, mistakes,
               and wins so your work becomes visible
@@ -232,7 +252,11 @@ function Home() {
 
           <div className="step-card">
             <span>03</span>
-            <h3>Create proof</h3>
+
+            <h3>
+              Create proof
+            </h3>
+
             <p>
               By the end of 60 days, you have projects
               and consistent work that demonstrate
@@ -261,7 +285,10 @@ function Home() {
 
       <footer>
         <div>
-          <h3>60-DAY CODING CHALLENGE</h3>
+          <h3>
+            60-DAY CODING CHALLENGE
+          </h3>
+
           <p>
             Build every day. Become impossible to ignore.
           </p>
@@ -269,7 +296,9 @@ function Home() {
 
         <button
           className="primary-btn"
-          onClick={() => navigate("/dashboard")}
+          onClick={() =>
+            navigate("/dashboard")
+          }
         >
           Start building →
         </button>
@@ -286,8 +315,12 @@ function Dashboard() {
   const [completedDays, setCompletedDays] =
     useState(getCompletedDays);
 
-  const currentDay = getCurrentDay(completedDays);
-  const completedCount = completedDays.length;
+  const currentDay =
+    getCurrentDay(completedDays);
+
+  const completedCount =
+    completedDays.length;
+
   const remainingDays =
     TOTAL_DAYS - completedCount;
 
@@ -311,18 +344,33 @@ function Dashboard() {
 
         <div className="dashboard-grid">
           <div className="stat-card">
-            <strong>{currentDay}</strong>
-            <span>Current Day</span>
+            <strong>
+              {currentDay}
+            </strong>
+
+            <span>
+              Current Day
+            </span>
           </div>
 
           <div className="stat-card">
-            <strong>{completedCount}</strong>
-            <span>Days Completed</span>
+            <strong>
+              {completedCount}
+            </strong>
+
+            <span>
+              Days Completed
+            </span>
           </div>
 
           <div className="stat-card">
-            <strong>{remainingDays}</strong>
-            <span>Days Remaining</span>
+            <strong>
+              {remainingDays}
+            </strong>
+
+            <span>
+              Days Remaining
+            </span>
           </div>
         </div>
 
@@ -349,7 +397,9 @@ function Dashboard() {
           </Link>
         </div>
 
-        <Journey completedDays={completedDays} />
+        <Journey
+          completedDays={completedDays}
+        />
       </main>
     </div>
   );
@@ -360,7 +410,8 @@ function Dashboard() {
 ========================= */
 
 function Journey({ completedDays }) {
-  const currentDay = getCurrentDay(completedDays);
+  const currentDay =
+    getCurrentDay(completedDays);
 
   return (
     <section className="journey">
@@ -381,8 +432,12 @@ function Journey({ completedDays }) {
           { length: TOTAL_DAYS },
           (_, index) => {
             const day = index + 1;
+
             const status =
-              getDayStatus(day, completedDays);
+              getDayStatus(
+                day,
+                completedDays
+              );
 
             return (
               <Link
@@ -489,7 +544,10 @@ function DayPage() {
       : null;
 
   function completeCurrentDay() {
-    if (!isCurrent || isCompleted) {
+    if (
+      !isCurrent ||
+      isCompleted
+    ) {
       return;
     }
 
@@ -499,6 +557,7 @@ function DayPage() {
     ].sort((a, b) => a - b);
 
     setCompletedDays(updatedDays);
+
     saveCompletedDays(updatedDays);
   }
 
@@ -514,7 +573,8 @@ function DayPage() {
     }
   }
 
-  let title = "Today's Challenge";
+  let title =
+    "Today's Challenge";
 
   let description =
     "Work on your project, document what you learned, and share your progress publicly.";
@@ -526,7 +586,8 @@ function DayPage() {
     "Complete one feature and push it to GitHub.";
 
   if (isUpcoming) {
-    title = `Day ${dayNumber} — Coming Up`;
+    title =
+      `Day ${dayNumber} — Coming Up`;
 
     description =
       "Keep building your skills and get ready for the next challenge.";
@@ -539,7 +600,8 @@ function DayPage() {
   }
 
   if (isCompleted) {
-    title = `Day ${dayNumber} Completed`;
+    title =
+      `Day ${dayNumber} Completed`;
 
     description =
       "You completed this challenge. Keep the momentum going.";
@@ -582,30 +644,43 @@ function DayPage() {
           </p>
 
           <div className="day-detail">
-            <h3>Goal</h3>
-            <p>{goal}</p>
+            <h3>
+              Goal
+            </h3>
+
+            <p>
+              {goal}
+            </p>
           </div>
 
           <div className="day-detail">
-            <h3>Deliverable</h3>
-            <p>{deliverable}</p>
+            <h3>
+              Deliverable
+            </h3>
+
+            <p>
+              {deliverable}
+            </p>
           </div>
 
-          {isCurrent && !isCompleted && (
-            <div className="current-day-area">
-              <div className="current-badge">
-                🎯 Day {dayNumber} — Current Challenge
-              </div>
+          {isCurrent &&
+            !isCompleted && (
+              <div className="current-day-area">
+                <div className="current-badge">
+                  🎯 Day {dayNumber} — Current Challenge
+                </div>
 
-              <button
-                type="button"
-                className="primary-btn complete-btn"
-                onClick={completeCurrentDay}
-              >
-                Complete Day {dayNumber} ✓
-              </button>
-            </div>
-          )}
+                <button
+                  type="button"
+                  className="primary-btn complete-btn"
+                  onClick={
+                    completeCurrentDay
+                  }
+                >
+                  Complete Day {dayNumber} ✓
+                </button>
+              </div>
+            )}
 
           {isCompleted && (
             <div className="completed-area">
@@ -617,7 +692,9 @@ function DayPage() {
                 <button
                   type="button"
                   className="primary-btn"
-                  onClick={continueToNextDay}
+                  onClick={
+                    continueToNextDay
+                  }
                 >
                   Continue to Day {nextDay} →
                 </button>
@@ -659,7 +736,9 @@ function DayPage() {
               <button
                 type="button"
                 className="secondary-btn"
-                onClick={continueToNextDay}
+                onClick={
+                  continueToNextDay
+                }
               >
                 Next Day →
               </button>
@@ -680,26 +759,31 @@ function App() {
     <BrowserRouter>
       <Routes>
 
+        {/* HOME */}
         <Route
           path="/"
           element={<Home />}
         />
 
+        {/* DASHBOARD */}
         <Route
           path="/dashboard"
           element={<Dashboard />}
         />
 
+        {/* CUSTOM DAY 12 PAGE */}
+        <Route
+          path="/day/12"
+          element={<Day12 />}
+        />
+
+        {/* OTHER DAY PAGES */}
         <Route
           path="/day/:day"
           element={<DayPage />}
         />
 
-        <Route
-          path="/day12"
-          element={<Day12 />}
-        />
-
+        {/* FALLBACK */}
         <Route
           path="*"
           element={<Home />}
