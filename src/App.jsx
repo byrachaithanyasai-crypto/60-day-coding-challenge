@@ -10,6 +10,8 @@ import {
   useParams,
 } from "react-router-dom";
 
+import Day12 from "./pages/Day12";
+
 const TOTAL_DAYS = 60;
 const INITIAL_CURRENT_DAY = 22;
 const STORAGE_KEY = "abtalks_completed_days";
@@ -115,8 +117,13 @@ function Navbar() {
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/dashboard">Dashboard</Link>
+
         <Link to={`/day/${currentDay}`}>
           Day {currentDay}
+        </Link>
+
+        <Link to="/day12">
+          Day 12
         </Link>
       </div>
 
@@ -284,15 +291,8 @@ function Dashboard() {
   const remainingDays =
     TOTAL_DAYS - completedCount;
 
-  function refreshProgress() {
-    setCompletedDays(getCompletedDays());
-  }
-
   return (
-    <div
-      className="app-page"
-      onFocus={refreshProgress}
-    >
+    <div className="app-page">
       <Navbar />
 
       <main className="dashboard-page">
@@ -591,7 +591,6 @@ function DayPage() {
             <p>{deliverable}</p>
           </div>
 
-          {/* CURRENT */}
           {isCurrent && !isCompleted && (
             <div className="current-day-area">
               <div className="current-badge">
@@ -608,7 +607,6 @@ function DayPage() {
             </div>
           )}
 
-          {/* COMPLETED */}
           {isCompleted && (
             <div className="completed-area">
               <div className="completed-badge">
@@ -627,7 +625,6 @@ function DayPage() {
             </div>
           )}
 
-          {/* UPCOMING */}
           {isUpcoming && (
             <div className="upcoming-area">
               <div className="upcoming-badge">
@@ -640,7 +637,6 @@ function DayPage() {
             </div>
           )}
 
-          {/* NAVIGATION */}
           <div className="day-actions">
             <Link
               to="/dashboard"
@@ -683,6 +679,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+
         <Route
           path="/"
           element={<Home />}
@@ -699,9 +696,15 @@ function App() {
         />
 
         <Route
+          path="/day12"
+          element={<Day12 />}
+        />
+
+        <Route
           path="*"
           element={<Home />}
         />
+
       </Routes>
     </BrowserRouter>
   );
