@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-/* =====================================================
+/* =========================================================
    GLOBAL
-===================================================== */
+========================================================= */
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-=======
-/* ================= RESET ================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
->>>>>>> day12
 }
 
 html {
@@ -22,194 +13,128 @@ html {
 }
 
 body {
-<<<<<<< HEAD
   min-width: 320px;
-
   background: #050716;
-
   color: #ffffff;
-
-  font-family:
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-=======
   font-family: Inter, Arial, sans-serif;
-  background: #050816;
-  color: white;
->>>>>>> day12
 }
 
 button,
 a {
-<<<<<<< HEAD
   font: inherit;
-}
-
-a {
-  color: inherit;
 }
 
 button {
   cursor: pointer;
 }
 
+a {
+  color: inherit;
+}
 
-/* =====================================================
-   PAGE
-===================================================== */
 
+/* =========================================================
+   APP / PAGE
+========================================================= */
+
+.app,
 .page {
   width: 100%;
-  min-height: 100vh;
-
-  background:
-    radial-gradient(
-      circle at 50% 20%,
-      rgba(70, 65, 150, 0.12),
-      transparent 35%
-    ),
-    #050716;
-
-  overflow-x: hidden;
-}
-
-
-/* =====================================================
-   NAVBAR
-===================================================== */
-
-.navbar {
-  width: min(1200px, calc(100% - 48px));
-
-  min-height: 90px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: 1fr auto 1fr;
-
-  align-items: center;
-=======
-  font-family: inherit;
-}
-
-.app {
   min-height: 100vh;
   overflow-x: hidden;
 
   background:
     radial-gradient(
       circle at 50% 25%,
-      rgba(82, 91, 255, 0.35),
+      rgba(82, 91, 255, 0.22),
       transparent 35%
     ),
     radial-gradient(
       circle at 50% 70%,
-      rgba(30, 75, 255, 0.2),
+      rgba(30, 75, 255, 0.12),
       transparent 40%
     ),
-    #050816;
+    #050716;
 }
 
 
-/* ================= NAVBAR ================= */
+/* =========================================================
+   NAVBAR
+========================================================= */
 
 .navbar {
-  width: 100%;
-  max-width: 1250px;
+  width: min(1250px, calc(100% - 48px));
+  min-height: 90px;
+  margin: 0 auto;
+  padding: 25px 0;
 
-  margin: auto;
-  padding: 25px 30px;
-
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
->>>>>>> day12
 
   gap: 30px;
 }
 
-<<<<<<< HEAD
-
-/* LOGO */
-
 .logo {
   justify-self: start;
 
+  color: #ffffff;
   text-decoration: none;
 
   font-size: 32px;
-
   font-weight: 900;
-
   letter-spacing: -1.5px;
 }
 
-
-/* NAV LINKS */
-
 .nav-links {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
+  gap: 8px;
 
-  gap: 36px;
-
-  padding: 16px 34px;
+  padding: 6px;
 
   background: rgba(255, 255, 255, 0.055);
-
   border: 1px solid rgba(255, 255, 255, 0.12);
-
   border-radius: 18px;
 }
 
 .nav-links a {
+  color: #d9d9e8;
   text-decoration: none;
 
-  font-size: 16px;
+  padding: 10px 16px;
+  border-radius: 10px;
 
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
 
-  color: #ffffff;
-
-  opacity: 0.9;
-
-  transition: opacity 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .nav-links a:hover {
-  opacity: 0.6;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
 }
-
-
-/* JOIN */
 
 .join-btn {
   justify-self: end;
 
-  text-decoration: none;
-
-  background: #ffffff;
-
-  color: #070814;
-
-  border-radius: 16px;
-
   padding: 18px 28px;
 
+  color: #070814;
+  background: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+
+  text-decoration: none;
   font-weight: 800;
 
-  box-shadow:
-    0 0 30px rgba(110, 100, 255, 0.16);
+  box-shadow: 0 0 30px rgba(110, 100, 255, 0.16);
 
   transition:
     transform 0.2s ease,
@@ -224,9 +149,9 @@ button {
 }
 
 
-/* =====================================================
+/* =========================================================
    BUTTONS
-===================================================== */
+========================================================= */
 
 .primary-btn,
 .secondary-btn {
@@ -234,35 +159,30 @@ button {
 
   padding: 0 28px;
 
-  border-radius: 16px;
-
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
 
+  border-radius: 16px;
+
   text-decoration: none;
-
   font-weight: 800;
-
-  border: 1px solid transparent;
 
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
-    background 0.2s ease;
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .primary-btn {
+  color: #070814;
   background: #ffffff;
 
-  color: #070814;
+  border: none;
 
   box-shadow:
     0 0 35px rgba(110, 100, 255, 0.2);
-
-  border: none;
 }
 
 .primary-btn:hover {
@@ -273,137 +193,103 @@ button {
 }
 
 .secondary-btn {
+  color: #ffffff;
   background: rgba(255, 255, 255, 0.03);
 
-  color: #ffffff;
-
-  border-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .secondary-btn:hover {
   transform: translateY(-3px);
 
   border-color: rgba(255, 255, 255, 0.5);
-
   background: rgba(255, 255, 255, 0.07);
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO
-===================================================== */
+========================================================= */
 
 .hero {
   width: min(1100px, calc(100% - 40px));
-
   min-height: 700px;
 
   margin: 0 auto;
-
   padding: 170px 20px 100px;
 
-  text-align: center;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
+
+  text-align: center;
 }
-
-
-/* BADGE */
 
 .badge {
   padding: 18px 38px;
 
-  border: 1px solid #7068ff;
+  color: #ffffff;
 
+  border: 1px solid #7068ff;
   border-radius: 999px;
 
   font-size: 16px;
-
   font-weight: 900;
-
   letter-spacing: 6px;
 
   box-shadow:
     0 0 35px rgba(100, 90, 255, 0.25);
 }
 
-
-/* SMALL TITLE */
-
 .small-title {
   margin-top: 35px;
 
-  font-size: clamp(42px, 7vw, 82px);
-
-  line-height: 1;
-
   color: #b9b8cf;
 
+  font-size: clamp(42px, 7vw, 82px);
+  line-height: 1;
   letter-spacing: -4px;
 }
-
-
-/* HERO H1 */
 
 .hero h1 {
   max-width: 1000px;
 
   margin-top: 5px;
 
-  font-size: clamp(58px, 10vw, 125px);
-
-  line-height: 0.9;
-
-  letter-spacing: -7px;
-
-  font-weight: 950;
-
   color: #ffffff;
+
+  font-size: clamp(58px, 10vw, 125px);
+  line-height: 0.9;
+  letter-spacing: -7px;
+  font-weight: 950;
 
   text-shadow:
     0 0 30px rgba(255, 255, 255, 0.1);
 }
-
-
-/* HERO TEXT */
 
 .hero-text {
   max-width: 700px;
 
   margin-top: 50px;
 
-  font-size: 20px;
-
-  line-height: 1.7;
-
   color: #d8d7e8;
+
+  font-size: 20px;
+  line-height: 1.7;
 }
-
-
-/* HERO BUTTONS */
 
 .hero-buttons {
   margin-top: 40px;
 
   display: flex;
-
+  justify-content: center;
   gap: 14px;
 
   flex-wrap: wrap;
-
-  justify-content: center;
 }
-
-
-/* DOTS */
 
 .dots {
   display: flex;
-
   gap: 8px;
 
   margin-top: 60px;
@@ -422,282 +308,33 @@ button {
   background: #ffffff;
 }
 
-
-/* HERO BOTTOM */
-
 .hero-bottom {
   margin-top: 20px;
 
   color: #8e8ca2;
-=======
-.logo {
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: -1px;
+
+  font-size: 16px;
 }
 
-.nav-links {
-  display: flex;
-  gap: 8px;
 
-  padding: 6px;
-
-  background: rgba(255, 255, 255, 0.08);
-
-  border: 1px solid rgba(255, 255, 255, 0.12);
-
-  border-radius: 12px;
-}
-
-.nav-links a {
-  color: #d9d9e8;
-
-  text-decoration: none;
-
-  padding: 10px 16px;
-
-  border-radius: 8px;
->>>>>>> day12
-
-  font-size: 14px;
-}
-
-<<<<<<< HEAD
-
-/* =====================================================
-   SECTIONS
-===================================================== */
+/* =========================================================
+   COMMON SECTIONS
+========================================================= */
 
 .about,
 .how,
 .stats {
   width: min(1200px, calc(100% - 48px));
-
   margin: 0 auto;
-}
-
-.about {
-  padding: 120px 0;
 }
 
 .section-label {
   color: #ffffff;
 
-=======
-.nav-links a:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.join-btn {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-
-  background: white;
-  color: #111;
-
-  padding: 12px 20px;
-
-  border-radius: 10px;
-
-  font-weight: 700;
-
-  cursor: pointer;
-}
-
-.join-btn:hover {
-  transform: translateY(-2px);
-}
-
-
-/* ================= HERO ================= */
-
-.hero {
-  min-height: 720px;
-
-  padding: 110px 25px 80px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  text-align: center;
-}
-
-.badge {
-  padding: 12px 24px;
-
-  border: 1px solid #8c83ff;
-
-  border-radius: 30px;
-
-  color: white;
-
-  font-size: 14px;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-
-  background: rgba(100, 90, 255, 0.16);
-
-  box-shadow:
-    0 0 20px rgba(100, 90, 255, 0.5),
-    inset 0 0 20px rgba(100, 90, 255, 0.12);
-}
-
-.small-title {
-  margin-top: 25px;
-
-  font-size: clamp(30px, 4vw, 55px);
-
-  color: #bfc1d5;
-}
-
-.hero h1 {
-  margin-top: 5px;
-
-  max-width: 1050px;
-
-  font-size: clamp(45px, 7vw, 88px);
-
-  line-height: 0.98;
-
-  letter-spacing: -5px;
-
-  font-weight: 900;
-
-  color: white;
-
-  text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
-}
-
-.hero-text {
-  max-width: 800px;
-
-  margin-top: 35px;
-
-  font-size: 19px;
-
-  line-height: 1.7;
-
-  color: #e0e1ea;
-}
-
-.hero-buttons {
-  display: flex;
-
-  gap: 14px;
-
-  margin-top: 38px;
-}
-
-.primary-btn,
-.secondary-btn {
-  padding: 18px 30px;
-
-  border-radius: 13px;
-
-  font-size: 16px;
-
-  font-weight: 700;
-
-  cursor: pointer;
-
-  text-decoration: none;
-}
-
-.primary-btn {
-  border: none;
-
-  color: #151529;
-
-  background: white;
-
-  box-shadow:
-    0 0 25px rgba(130, 120, 255, 0.65),
-    0 10px 40px rgba(50, 60, 255, 0.3);
-}
-
-.primary-btn:hover {
-  transform: translateY(-2px);
-}
-
-.secondary-btn {
-  color: white;
-
-  border: 1px solid rgba(255, 255, 255, 0.35);
-
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.secondary-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.dots {
-  display: flex;
-
-  gap: 10px;
-
-  margin-top: 45px;
-}
-
-.dots span {
-  width: 10px;
-  height: 10px;
-
-  border-radius: 50%;
-
-  background: #73758a;
-}
-
-.dots .active {
-  background: white;
-
-  box-shadow: 0 0 12px white;
-}
-
-.hero-bottom {
-  margin-top: 20px;
-
-  font-size: 16px;
-
-  color: #d7d8e4;
-}
-
-
-/* ================= ABOUT ================= */
-
-.about {
-  max-width: 1200px;
-
-  margin: 0 auto;
-
-  padding: 150px 25px 100px;
-
-  text-align: center;
-}
-
-.section-label {
->>>>>>> day12
   font-size: 15px;
-
   font-weight: 900;
-
-<<<<<<< HEAD
   letter-spacing: 6px;
-
   text-transform: uppercase;
-}
-
-.about h2,
-.journey h2 {
-  margin-top: 18px;
-
-  font-size: clamp(36px, 5vw, 64px);
-
-  line-height: 1.05;
-
-  letter-spacing: -2px;
 }
 
 .section-subtitle {
@@ -705,60 +342,44 @@ button {
 
   margin: 24px auto 0;
 
-  font-size: 20px;
-
-  line-height: 1.7;
-
   color: #c9c8d9;
+
+  font-size: 20px;
+  line-height: 1.7;
 }
 
 
-/* =====================================================
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+  padding: 120px 0;
+  text-align: center;
+}
+
+.about h2,
+.journey h2 {
+  margin-top: 18px;
+
+  color: #ffffff;
+
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+
+/* =========================================================
    STEPS
-===================================================== */
+========================================================= */
 
 .steps {
   margin-top: 60px;
 
-=======
-  letter-spacing: 4px;
-
-  color: white;
-}
-
-.about h2 {
-  max-width: 1100px;
-
-  margin: 25px auto 0;
-
-  font-size: clamp(45px, 6vw, 75px);
-
-  line-height: 1.05;
-
-  letter-spacing: -3px;
-
-  color: white;
-}
-
-.section-subtitle {
-  margin: 35px auto 60px;
-
-  max-width: 800px;
-
-  color: #cfd0dd;
-
-  font-size: 18px;
-
-  line-height: 1.6;
-}
-
-.steps {
->>>>>>> day12
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
 
-<<<<<<< HEAD
   gap: 18px;
 }
 
@@ -768,33 +389,16 @@ button {
   padding: 32px;
 
   border: 1px solid rgba(255, 255, 255, 0.16);
-
   border-radius: 22px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(28, 30, 60, 0.95),
-      rgba(12, 14, 30, 0.98)
-    );
-=======
-  gap: 25px;
-
-  text-align: left;
-}
-
-.step-card {
-  min-height: 300px;
-
-  padding: 45px;
-
-  border: 1px solid rgba(255, 255, 255, 0.22);
-
-  border-radius: 20px;
 
   background: rgba(255, 255, 255, 0.04);
 
-  transition: 0.3s ease;
+  text-align: left;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .step-card:hover {
@@ -803,22 +407,20 @@ button {
   background: rgba(255, 255, 255, 0.07);
 
   border-color: rgba(255, 255, 255, 0.4);
->>>>>>> day12
 }
 
 .step-card > span {
-  font-size: 14px;
-
-  font-weight: 900;
-<<<<<<< HEAD
-
   color: #aaa5ff;
 
+  font-size: 14px;
+  font-weight: 900;
   letter-spacing: 3px;
 }
 
 .step-card h3 {
   margin-top: 40px;
+
+  color: #ffffff;
 
   font-size: 24px;
 }
@@ -832,49 +434,19 @@ button {
 }
 
 
-/* =====================================================
+/* =========================================================
    STATS
-===================================================== */
+========================================================= */
 
 .stats {
-  padding: 80px 0 120px;
-=======
-}
-
-.step-card h3 {
-  margin-top: 60px;
-
-  font-size: 30px;
-
-  color: white;
-}
-
-.step-card p {
-  margin-top: 18px;
-
-  color: #c9cad6;
-
-  line-height: 1.6;
-
-  font-size: 17px;
-}
-
-
-/* ================= STATS ================= */
-
-.stats {
-  max-width: 1200px;
-
-  margin: 20px auto 160px;
+  margin-top: 20px;
+  margin-bottom: 160px;
 
   padding: 0 25px;
->>>>>>> day12
 
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
 
-<<<<<<< HEAD
   gap: 24px;
 }
 
@@ -883,78 +455,21 @@ button {
 
   padding: 40px 25px;
 
-  border-radius: 24px;
-
-  border: 1px solid rgba(255, 255, 255, 0.2);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(28, 30, 63, 0.85),
-      rgba(15, 17, 36, 0.95)
-    );
-=======
-  gap: 25px;
-}
-
-.stat-card {
-  min-height: 220px;
-
-  padding: 40px;
->>>>>>> day12
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
 
-<<<<<<< HEAD
   text-align: center;
-}
 
-.stat-card strong {
-  font-size: 100px;
-
-  line-height: 1;
-
-  font-weight: 900;
-}
-
-.stat-card span {
-  margin-top: 25px;
-
-  font-size: 22px;
-
-  font-weight: 700;
-
-  color: #dddced;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer {
-  width: min(1200px, calc(100% - 48px));
-
-  margin: 0 auto;
-
-  padding: 70px 0;
-=======
-  border: 1px solid rgba(255, 255, 255, 0.25);
-
-  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
 
   background: rgba(255, 255, 255, 0.04);
 
-  box-shadow:
-    inset 0 0 50px rgba(70, 80, 255, 0.08);
-
-  transition: 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
 }
 
 .stat-card:hover {
@@ -964,31 +479,28 @@ footer {
 }
 
 .stat-card strong {
-  font-size: 65px;
+  color: #ffffff;
 
+  font-size: 100px;
   line-height: 1;
-
-  color: white;
+  font-weight: 900;
 }
 
 .stat-card span {
-  margin-top: 20px;
+  margin-top: 25px;
 
-  font-size: 18px;
+  color: #dddced;
 
+  font-size: 22px;
   font-weight: 700;
-
-  color: #d8d9e5;
 }
 
 
-/* ================= HOW IT WORKS ================= */
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
 
 .how {
-  max-width: 1200px;
-
-  margin: 0 auto;
-
   padding: 100px 25px 180px;
 
   text-align: center;
@@ -997,16 +509,14 @@ footer {
 .how h2 {
   margin-top: 25px;
 
+  color: #ffffff;
+
   font-size: clamp(45px, 6vw, 75px);
-
   letter-spacing: -3px;
-
-  color: white;
 }
 
 .how-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
 
   gap: 25px;
@@ -1022,24 +532,24 @@ footer {
   padding: 35px;
 
   border: 1px solid rgba(255, 255, 255, 0.22);
-
   border-radius: 18px;
 
   background: rgba(255, 255, 255, 0.04);
 }
 
 .how-card > span {
-  font-size: 14px;
+  color: #aaa5ff;
 
+  font-size: 14px;
   font-weight: 900;
 }
 
 .how-card h3 {
   margin-top: 40px;
 
-  font-size: 26px;
+  color: #ffffff;
 
-  color: white;
+  font-size: 26px;
 }
 
 .how-card p {
@@ -1051,29 +561,28 @@ footer {
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer {
-  max-width: 1200px;
+  width: min(1200px, calc(100% - 48px));
 
-  margin: auto;
-
+  margin: 0 auto;
   padding: 60px 25px 80px;
->>>>>>> day12
-
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   gap: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 footer h3 {
-<<<<<<< HEAD
+  color: #ffffff;
+
   font-size: 22px;
 }
 
@@ -1084,38 +593,51 @@ footer p {
 }
 
 
-/* =====================================================
+/* =========================================================
    DASHBOARD
-===================================================== */
+========================================================= */
 
 .dashboard-page {
   width: min(1200px, calc(100% - 48px));
 
   margin: 0 auto;
-
   padding: 80px 0 120px;
+
+  color: #ffffff;
 
   text-align: center;
 }
 
 .dashboard-page > .section-label {
   margin-bottom: 20px;
+
+  color: #ffffff;
 }
 
 .dashboard-page > h1 {
+  margin-top: 0;
+
+  color: #ffffff;
+
   font-size: clamp(48px, 7vw, 88px);
-
   line-height: 1;
-
   letter-spacing: -4px;
+  font-weight: 900;
+
+  text-shadow:
+    0 0 25px rgba(255, 255, 255, 0.08);
 }
 
 .dashboard-page > .section-subtitle {
   margin-bottom: 65px;
+
+  color: #cfd0dd;
 }
 
 
-/* DASHBOARD GRID */
+/* =========================================================
+   DASHBOARD GRID
+========================================================= */
 
 .dashboard-grid {
   display: grid;
@@ -1126,7 +648,9 @@ footer p {
 }
 
 
-/* DASHBOARD CARD */
+/* =========================================================
+   DASHBOARD CARD
+========================================================= */
 
 .dashboard-card {
   margin-top: 40px;
@@ -1147,16 +671,33 @@ footer p {
   text-align: center;
 }
 
-.dashboard-day-label {
+.dashboard-card > span {
+  display: inline-block;
+
+  padding: 7px 13px;
+
+  border-radius: 999px;
+
+  color: #aaa0ff;
+
+  background: rgba(110, 95, 255, 0.12);
+
+  font-size: 12px;
   font-weight: 900;
+  letter-spacing: 2px;
+}
 
-  letter-spacing: 5px;
-
+.dashboard-day-label {
   color: #aaa5ff;
+
+  font-weight: 900;
+  letter-spacing: 5px;
 }
 
 .dashboard-card h2 {
   margin-top: 25px;
+
+  color: #ffffff;
 
   font-size: 38px;
 }
@@ -1169,14 +710,13 @@ footer p {
   color: #c5c4d4;
 
   line-height: 1.7;
-
   font-size: 18px;
 }
 
 
-/* =====================================================
+/* =========================================================
    JOURNEY
-===================================================== */
+========================================================= */
 
 .journey {
   width: 100%;
@@ -1195,31 +735,288 @@ footer p {
 }
 
 
-/* =====================================================
+/* =========================================================
    JOURNEY GRID
-===================================================== */
+========================================================= */
 
 .journey-grid {
   width: 100%;
 
   display: grid;
 
-  grid-template-columns:
-    repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 
   gap: 16px;
+
+  margin-top: 45px;
 
   text-align: left;
 }
 
 
-/* =====================================================
-   DAY BOX
-===================================================== */
+/* =========================================================
+   JOURNEY DAY CARD
+========================================================= */
+
+.journey-day {
+  position: relative;
+
+  min-width: 0;
+  min-height: 155px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(27, 29, 58, 0.96),
+      rgba(12, 14, 30, 0.98)
+    );
+
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease,
+    opacity 0.22s ease;
+}
+
+.journey-day:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(150, 145, 255, 0.7);
+
+  box-shadow:
+    0 15px 35px rgba(80, 70, 255, 0.18);
+}
+
+
+/* =========================================================
+   DAY NUMBER
+========================================================= */
+
+.journey-day .day-number {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================================================
+   DAY NAME
+========================================================= */
+
+.journey-day .day-name {
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   DAY STATUS
+========================================================= */
+
+.journey-day .day-status {
+  width: fit-content;
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   COMPLETED DAY
+========================================================= */
+
+.journey-day.completed {
+  border-color: rgba(60, 220, 150, 0.35);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20, 65, 55, 0.92),
+      rgba(12, 30, 32, 0.98)
+    );
+}
+
+.journey-day.completed:hover {
+  border-color: rgba(80, 240, 170, 0.7);
+
+  box-shadow:
+    0 15px 35px rgba(30, 220, 145, 0.14);
+}
+
+.journey-day.completed .day-number {
+  color: #69f0b0;
+
+  background: rgba(50, 220, 145, 0.15);
+
+  border-color: rgba(70, 230, 155, 0.35);
+}
+
+.journey-day.completed .day-status {
+  color: #69f0b0;
+
+  background: rgba(50, 220, 145, 0.13);
+}
+
+
+/* =========================================================
+   CURRENT DAY
+========================================================= */
+
+.journey-day.current {
+  border-color: rgba(150, 135, 255, 0.9);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(67, 57, 125, 0.98),
+      rgba(29, 25, 68, 0.98)
+    );
+
+  box-shadow:
+    0 0 0 1px rgba(140, 125, 255, 0.18),
+    0 0 35px rgba(110, 90, 255, 0.3);
+}
+
+.journey-day.current:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(190, 180, 255, 1);
+
+  box-shadow:
+    0 0 0 1px rgba(170, 155, 255, 0.3),
+    0 0 45px rgba(110, 90, 255, 0.42);
+}
+
+.journey-day.current .day-number {
+  color: #17132e;
+
+  background: #ffffff;
+
+  border-color: #ffffff;
+
+  box-shadow:
+    0 0 18px rgba(255, 255, 255, 0.3);
+}
+
+.journey-day.current .day-status {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.13);
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.journey-day.current::before {
+  content: "CURRENT DAY";
+
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  padding: 5px 8px;
+
+  border-radius: 999px;
+
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   UPCOMING DAY
+========================================================= */
+
+.journey-day.upcoming {
+  opacity: 0.55;
+
+  border-color: rgba(255, 255, 255, 0.09);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(22, 23, 42, 0.8),
+      rgba(10, 11, 24, 0.9)
+    );
+}
+
+.journey-day.upcoming:hover {
+  opacity: 0.9;
+
+  border-color: rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.journey-day.upcoming .day-number {
+  color: #858394;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.journey-day.upcoming .day-name {
+  color: #aaa8b8;
+}
+
+.journey-day.upcoming .day-status {
+  color: #858394;
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* =========================================================
+   OLD DAY BOX SUPPORT
+========================================================= */
 
 .day-box {
   min-width: 0;
-
   min-height: 150px;
 
   padding: 20px;
@@ -1240,9 +1037,7 @@ footer p {
   color: #ffffff;
 
   display: flex;
-
   flex-direction: column;
-
   justify-content: space-between;
 
   transition:
@@ -1251,7 +1046,6 @@ footer p {
     box-shadow 0.22s ease,
     opacity 0.22s ease;
 }
-
 
 .day-box:hover {
   transform: translateY(-5px);
@@ -1262,183 +1056,47 @@ footer p {
     0 15px 35px rgba(80, 70, 255, 0.18);
 }
 
-
-/* =====================================================
-   DAY BOX HEADER
-===================================================== */
-
 .day-box-header {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 }
 
-
-/* NUMBER CIRCLE */
-
-.day-number {
-  width: 40px;
-
-  height: 40px;
-
-  border-radius: 50%;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  font-size: 14px;
-
-  font-weight: 900;
-
-  background: rgba(255, 255, 255, 0.08);
-
-  border: 1px solid rgba(255, 255, 255, 0.14);
-}
-
-
-/* ICON */
-
-.day-icon {
-  width: 28px;
-
-  height: 28px;
-
-  border-radius: 50%;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  font-size: 13px;
-
-  font-weight: 900;
-}
-
-
-/* =====================================================
-   DAY BOX CONTENT
-===================================================== */
-
 .day-box-content h3 {
-  font-size: 18px;
+  color: #ffffff;
 
+  font-size: 18px;
   font-weight: 800;
 }
 
 .day-box-content p {
   margin-top: 6px;
 
+  color: #aaa8b8;
+
   font-size: 12px;
-
   font-weight: 700;
-
   letter-spacing: 0.5px;
+}
 
-  opacity: 0.65;
+.day-icon {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 13px;
+  font-weight: 900;
 }
 
 
-/* =====================================================
-   COMPLETED DAY
-===================================================== */
-
-.day-box.completed {
-  border-color: rgba(120, 110, 255, 0.3);
-}
-
-.day-box.completed .day-number {
-  background: rgba(105, 95, 255, 0.18);
-
-  border-color: rgba(130, 120, 255, 0.4);
-}
-
-.completed-icon {
-  color: #aaa5ff;
-
-  background: rgba(110, 100, 255, 0.12);
-}
-
-.day-box.completed .day-box-content p {
-  color: #aaa5ff;
-
-  opacity: 1;
-}
-
-
-/* =====================================================
-   CURRENT DAY
-===================================================== */
-
-.day-box.current {
-  border-color: rgba(255, 255, 255, 0.8);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(55, 56, 105, 1),
-      rgba(25, 27, 55, 1)
-    );
-
-  box-shadow:
-    0 0 35px rgba(105, 95, 255, 0.28);
-}
-
-.day-box.current .day-number {
-  background: #ffffff;
-
-  color: #080918;
-
-  border-color: #ffffff;
-}
-
-.current-icon {
-  color: #ffffff;
-
-  background: rgba(255, 255, 255, 0.1);
-
-  font-size: 8px;
-}
-
-.day-box.current .day-box-content p {
-  color: #ffffff;
-
-  opacity: 1;
-}
-
-
-/* =====================================================
-   UPCOMING
-===================================================== */
-
-.day-box.upcoming {
-  opacity: 0.62;
-}
-
-.day-box.upcoming:hover {
-  opacity: 1;
-}
-
-.upcoming-icon {
-  color: #89879b;
-
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.day-box.upcoming .day-box-content p {
-  color: #8e8c9f;
-}
-
-
-/* =====================================================
+/* =========================================================
    DAY PAGE
-===================================================== */
+========================================================= */
 
 .day-page {
   width: min(1000px, calc(100% - 48px));
@@ -1453,10 +1111,10 @@ footer p {
 .day-page > h1 {
   margin-top: 20px;
 
+  color: #ffffff;
+
   font-size: clamp(48px, 7vw, 80px);
-
   line-height: 1;
-
   letter-spacing: -4px;
 }
 
@@ -1465,9 +1123,9 @@ footer p {
 }
 
 
-/* =====================================================
+/* =========================================================
    DAY CARD
-===================================================== */
+========================================================= */
 
 .day-card {
   padding: 65px 50px;
@@ -1488,15 +1146,17 @@ footer p {
 }
 
 .day-progress {
+  color: #ffffff;
+
   font-size: 28px;
-
   font-weight: 900;
-
   letter-spacing: 6px;
 }
 
 .day-card > h2 {
   margin-top: 30px;
+
+  color: #ffffff;
 
   font-size: 42px;
 }
@@ -1509,20 +1169,21 @@ footer p {
   color: #d0cfdd;
 
   font-size: 19px;
-
   line-height: 1.7;
 }
 
 
-/* =====================================================
+/* =========================================================
    DAY INFO
-===================================================== */
+========================================================= */
 
 .day-info {
   margin-top: 35px;
 }
 
 .day-info h3 {
+  color: #ffffff;
+
   font-size: 22px;
 }
 
@@ -1532,21 +1193,20 @@ footer p {
   color: #c7c5d5;
 
   font-size: 18px;
-
   line-height: 1.6;
 }
 
 
-/* =====================================================
+/* =========================================================
    DAY MESSAGES
-===================================================== */
+========================================================= */
 
 .completed-message,
 .current-message,
 .upcoming-message {
-  margin: 35px auto 0;
-
   width: fit-content;
+
+  margin: 35px auto 0;
 
   padding: 14px 22px;
 
@@ -1556,35 +1216,83 @@ footer p {
 }
 
 .completed-message {
-  background: rgba(100, 90, 255, 0.13);
-
   color: #aaa5ff;
+
+  background: rgba(100, 90, 255, 0.13);
 }
 
 .current-message {
-  background: rgba(255, 255, 255, 0.1);
-
   color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .upcoming-message {
-  background: rgba(255, 255, 255, 0.05);
-
   color: #a09daf;
+
+  background: rgba(255, 255, 255, 0.05);
 }
 
 
-/* =====================================================
+/* =========================================================
+   DAY STATUS BADGES
+========================================================= */
+
+.current-badge,
+.completed-badge,
+.upcoming-badge {
+  width: fit-content;
+
+  margin: 28px auto 0;
+
+  padding: 12px 18px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.current-badge {
+  color: #ffffff;
+
+  background: rgba(110, 90, 255, 0.18);
+
+  border: 1px solid rgba(150, 135, 255, 0.4);
+}
+
+.completed-badge {
+  color: #69f0b0;
+
+  background: rgba(50, 220, 145, 0.12);
+
+  border: 1px solid rgba(70, 230, 155, 0.3);
+}
+
+.upcoming-badge {
+  color: #9996a8;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.current-day-area,
+.completed-area,
+.upcoming-area {
+  margin-top: 30px;
+}
+
+
+/* =========================================================
    DAY ACTIONS
-===================================================== */
+========================================================= */
 
 .day-actions {
   margin-top: 45px;
 
   display: flex;
-
   justify-content: center;
-
   align-items: center;
 
   gap: 14px;
@@ -1593,26 +1301,22 @@ footer p {
 }
 
 
-/* =====================================================
+/* =========================================================
    LARGE DESKTOP
-===================================================== */
+========================================================= */
 
 @media (min-width: 1400px) {
-
   .journey-grid {
-    grid-template-columns:
-      repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
-
 }
 
 
-/* =====================================================
+/* =========================================================
    TABLET
-===================================================== */
+========================================================= */
 
 @media (max-width: 1000px) {
-
   .navbar {
     grid-template-columns: 1fr auto;
 
@@ -1621,7 +1325,6 @@ footer p {
 
   .nav-links {
     grid-column: 1 / -1;
-
     grid-row: 2;
 
     width: 100%;
@@ -1632,41 +1335,28 @@ footer p {
     grid-row: 1;
   }
 
-
-  .steps {
+  .steps,
+  .stats,
+  .dashboard-grid,
+  .how-grid {
     grid-template-columns: 1fr;
   }
-
-
-  .stats {
-    grid-template-columns: 1fr;
-  }
-
-
-  .dashboard-grid {
-    grid-template-columns: 1fr;
-  }
-
 
   .journey-grid {
-    grid-template-columns:
-      repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-
 }
 
 
-/* =====================================================
+/* =========================================================
    MOBILE
-===================================================== */
+========================================================= */
 
 @media (max-width: 700px) {
-
   .navbar {
     width: calc(100% - 28px);
 
     display: flex;
-
     flex-direction: column;
 
     gap: 18px;
@@ -1675,7 +1365,11 @@ footer p {
   }
 
   .logo {
+    width: 100%;
+
     align-self: center;
+
+    text-align: center;
 
     font-size: 28px;
   }
@@ -1685,12 +1379,14 @@ footer p {
 
     padding: 14px 10px;
 
-    gap: 18px;
+    gap: 10px;
 
     border-radius: 16px;
   }
 
   .nav-links a {
+    padding: 9px 10px;
+
     font-size: 13px;
   }
 
@@ -1717,7 +1413,6 @@ footer p {
     padding: 15px 20px;
 
     font-size: 11px;
-
     letter-spacing: 3px;
   }
 
@@ -1741,7 +1436,6 @@ footer p {
     margin-top: 45px;
 
     font-size: 16px;
-
     line-height: 1.7;
   }
 
@@ -1776,7 +1470,8 @@ footer p {
   }
 
   .about h2,
-  .journey h2 {
+  .journey h2,
+  .how h2 {
     font-size: 36px;
   }
 
@@ -1815,113 +1510,24 @@ footer p {
   }
 
 
-  /* FOOTER */
-=======
-  font-size: 18px;
+  /* HOW */
 
-  letter-spacing: 1px;
-}
-
-footer p {
-  margin-top: 12px;
-
-  color: #aaaebe;
-}
-
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 800px) {
-  .navbar {
-    flex-wrap: wrap;
-
-    justify-content: center;
+  .how {
+    padding: 80px 18px 100px;
   }
 
-  .logo {
-    width: 100%;
-
-    text-align: center;
-  }
-
-  .nav-links {
-    order: 3;
-  }
-
-  .join-btn {
-    display: none;
-  }
-
-  .hero {
-    padding-top: 70px;
-
-    min-height: auto;
-  }
-
-  .hero h1 {
-    letter-spacing: -2px;
-
-    font-size: clamp(42px, 12vw, 65px);
-  }
-
-  .hero-text {
-    font-size: 17px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-
-    width: 100%;
-
-    max-width: 350px;
-  }
-
-  .primary-btn,
-  .secondary-btn {
-    width: 100%;
-
-    text-align: center;
-  }
-
-  .about {
-    padding-top: 100px;
-  }
-
-  .about h2 {
-    letter-spacing: -2px;
-  }
-
-  .steps,
-  .stats,
   .how-grid {
     grid-template-columns: 1fr;
   }
 
-  .stats {
-    margin-bottom: 80px;
-  }
 
-  .step-card {
-    min-height: 250px;
-
-    padding: 30px;
-  }
-
-  .step-card h3 {
-    margin-top: 40px;
-  }
-
-  .how {
-    padding-bottom: 100px;
-  }
->>>>>>> day12
+  /* FOOTER */
 
   footer {
     flex-direction: column;
 
     align-items: flex-start;
 
-<<<<<<< HEAD
     padding: 50px 0;
   }
 
@@ -1960,11 +1566,47 @@ footer p {
   }
 
   .journey-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 12px;
+
+    margin-top: 30px;
   }
+
+  .journey-day {
+    min-height: 135px;
+
+    padding: 15px;
+
+    border-radius: 17px;
+  }
+
+  .journey-day .day-number {
+    width: 36px;
+    height: 36px;
+
+    font-size: 12px;
+  }
+
+  .journey-day .day-name {
+    font-size: 15px;
+  }
+
+  .journey-day .day-status {
+    padding: 5px 8px;
+
+    font-size: 9px;
+  }
+
+  .journey-day.current::before {
+    top: 9px;
+    right: 9px;
+
+    font-size: 7px;
+  }
+
+
+  /* OLD DAY BOX */
 
   .day-box {
     min-height: 130px;
@@ -1974,41 +1616,6 @@ footer p {
     border-radius: 16px;
   }
 
-  .day-number {
-    width: 34px;
-
-    height: 34px;
-=======
-    gap: 30px;
-  }
-
-  footer .primary-btn {
-    width: auto;
-  }
-}
-
-
-/* ================= SMALL MOBILE ================= */
-
-@media (max-width: 500px) {
-  .navbar {
-    padding: 20px 15px;
-  }
-
-  .nav-links {
-    width: 100%;
-
-    justify-content: center;
-  }
-
-  .nav-links a {
-    padding: 9px 10px;
->>>>>>> day12
-
-    font-size: 13px;
-  }
-
-<<<<<<< HEAD
   .day-box-content h3 {
     font-size: 16px;
   }
@@ -2058,427 +1665,40 @@ footer p {
   .day-actions .secondary-btn {
     width: 100%;
   }
-
 }
 
 
-/* =====================================================
+/* =========================================================
    SMALL MOBILE
-===================================================== */
+========================================================= */
 
-@media (max-width: 380px) {
-
-  .journey-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 50px;
+@media (max-width: 500px) {
+  .navbar {
+    padding: 20px 15px;
   }
 
   .nav-links {
-    gap: 12px;
+    width: 100%;
+
+    justify-content: center;
   }
 
   .nav-links a {
-    font-size: 12px;
+    padding: 9px 10px;
+
+    font-size: 13px;
   }
 
-}
-/* =====================================================
-   60 DAY JOURNEY - CURRENT JSX CARD STYLES
-   Paste this at the VERY BOTTOM of App.css
-===================================================== */
-
-.journey-grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 45px;
-}
-
-/* =========================
-   DAY CARD
-========================= */
-
-.journey-day {
-  min-width: 0;
-  min-height: 155px;
-  padding: 20px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 12px;
-
-  text-decoration: none;
-  color: #ffffff;
-
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(27, 29, 58, 0.96),
-      rgba(12, 14, 30, 0.98)
-    );
-
-  transition:
-    transform 0.22s ease,
-    border-color 0.22s ease,
-    box-shadow 0.22s ease,
-    background 0.22s ease,
-    opacity 0.22s ease;
-}
-
-.journey-day:hover {
-  transform: translateY(-5px);
-  border-color: rgba(150, 145, 255, 0.7);
-  box-shadow:
-    0 15px 35px rgba(80, 70, 255, 0.18);
-}
-
-/* =========================
-   DAY NUMBER
-========================= */
-
-.journey-day .day-number {
-  width: 42px;
-  height: 42px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  font-size: 14px;
-  font-weight: 900;
-
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-/* =========================
-   DAY NAME
-========================= */
-
-.journey-day .day-name {
-  font-size: 18px;
-  font-weight: 800;
-}
-
-/* =========================
-   STATUS
-========================= */
-
-.journey-day .day-status {
-  width: fit-content;
-
-  padding: 6px 10px;
-
-  border-radius: 999px;
-
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-}
-
-/* =====================================================
-   COMPLETED
-===================================================== */
-
-.journey-day.completed {
-  border-color: rgba(60, 220, 150, 0.35);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(20, 65, 55, 0.92),
-      rgba(12, 30, 32, 0.98)
-    );
-}
-
-.journey-day.completed:hover {
-  border-color: rgba(80, 240, 170, 0.7);
-
-  box-shadow:
-    0 15px 35px rgba(30, 220, 145, 0.14);
-}
-
-.journey-day.completed .day-number {
-  color: #69f0b0;
-
-  background: rgba(50, 220, 145, 0.15);
-  border-color: rgba(70, 230, 155, 0.35);
-}
-
-.journey-day.completed .day-status {
-  color: #69f0b0;
-  background: rgba(50, 220, 145, 0.13);
-}
-
-/* =====================================================
-   CURRENT
-===================================================== */
-
-.journey-day.current {
-  position: relative;
-
-  border-color: rgba(150, 135, 255, 0.9);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(67, 57, 125, 0.98),
-      rgba(29, 25, 68, 0.98)
-    );
-
-  box-shadow:
-    0 0 0 1px rgba(140, 125, 255, 0.18),
-    0 0 35px rgba(110, 90, 255, 0.3);
-}
-
-.journey-day.current:hover {
-  transform: translateY(-6px);
-
-  border-color: rgba(190, 180, 255, 1);
-
-  box-shadow:
-    0 0 0 1px rgba(170, 155, 255, 0.3),
-    0 0 45px rgba(110, 90, 255, 0.42);
-}
-
-.journey-day.current .day-number {
-  color: #17132e;
-
-  background: #ffffff;
-
-  border-color: #ffffff;
-
-  box-shadow:
-    0 0 18px rgba(255, 255, 255, 0.3);
-}
-
-.journey-day.current .day-status {
-  color: #ffffff;
-
-  background: rgba(255, 255, 255, 0.13);
-
-  border: 1px solid rgba(255, 255, 255, 0.22);
-}
-
-/* CURRENT BADGE */
-
-.journey-day.current::before {
-  content: "CURRENT DAY";
-
-  position: absolute;
-
-  top: 12px;
-  right: 12px;
-
-  padding: 5px 8px;
-
-  border-radius: 999px;
-
-  background: rgba(255, 255, 255, 0.12);
-
-  color: #ffffff;
-
-  font-size: 8px;
-  font-weight: 900;
-
-  letter-spacing: 1px;
-}
-
-/* =====================================================
-   UPCOMING
-===================================================== */
-
-.journey-day.upcoming {
-  opacity: 0.55;
-
-  border-color: rgba(255, 255, 255, 0.09);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(22, 23, 42, 0.8),
-      rgba(10, 11, 24, 0.9)
-    );
-}
-
-.journey-day.upcoming:hover {
-  opacity: 0.9;
-
-  border-color: rgba(255, 255, 255, 0.25);
-
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.journey-day.upcoming .day-number {
-  color: #858394;
-
-  background: rgba(255, 255, 255, 0.04);
-
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-.journey-day.upcoming .day-name {
-  color: #aaa8b8;
-}
-
-.journey-day.upcoming .day-status {
-  color: #858394;
-
-  background: rgba(255, 255, 255, 0.04);
-}
-
-/* =====================================================
-   DASHBOARD CARD
-===================================================== */
-
-.dashboard-card {
-  text-align: center;
-}
-
-.dashboard-card > span {
-  display: inline-block;
-
-  padding: 7px 13px;
-
-  border-radius: 999px;
-
-  color: #aaa0ff;
-
-  background: rgba(110, 95, 255, 0.12);
-
-  font-size: 12px;
-  font-weight: 900;
-
-  letter-spacing: 2px;
-}
-
-/* =====================================================
-   DAY PAGE STATUS BADGES
-===================================================== */
-
-.current-badge,
-.completed-badge,
-.upcoming-badge {
-  width: fit-content;
-
-  margin: 28px auto 0;
-
-  padding: 12px 18px;
-
-  border-radius: 999px;
-
-  font-weight: 800;
-  font-size: 14px;
-}
-
-.current-badge {
-  color: #ffffff;
-
-  background: rgba(110, 90, 255, 0.18);
-
-  border: 1px solid rgba(150, 135, 255, 0.4);
-}
-
-.completed-badge {
-  color: #69f0b0;
-
-  background: rgba(50, 220, 145, 0.12);
-
-  border: 1px solid rgba(70, 230, 155, 0.3);
-}
-
-.upcoming-badge {
-  color: #9996a8;
-
-  background: rgba(255, 255, 255, 0.05);
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.current-day-area,
-.completed-area,
-.upcoming-area {
-  margin-top: 30px;
-}
-
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-
-@media (min-width: 1400px) {
-  .journey-grid {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 1000px) {
-  .journey-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 700px) {
-  .journey-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    margin-top: 30px;
-  }
-
-  .journey-day {
-    min-height: 135px;
-    padding: 15px;
-    border-radius: 17px;
-  }
-
-  .journey-day .day-number {
-    width: 36px;
-    height: 36px;
-    font-size: 12px;
-  }
-
-  .journey-day .day-name {
-    font-size: 15px;
-  }
-
-  .journey-day .day-status {
-    font-size: 9px;
-    padding: 5px 8px;
-  }
-
-  .journey-day.current::before {
-    top: 9px;
-    right: 9px;
-    font-size: 7px;
-  }
-}
-
-@media (max-width: 380px) {
-  .journey-grid {
-    grid-template-columns: 1fr;
-=======
   .hero {
     padding-left: 18px;
-
     padding-right: 18px;
   }
 
   .badge {
-    font-size: 11px;
-
-    letter-spacing: 1.5px;
-
     padding: 10px 16px;
+
+    font-size: 11px;
+    letter-spacing: 1.5px;
   }
 
   .small-title {
@@ -2496,7 +1716,6 @@ footer p {
   .about,
   .how {
     padding-left: 18px;
-
     padding-right: 18px;
   }
 
@@ -2510,7 +1729,8 @@ footer p {
   }
 
   .stats {
-    padding: 0 18px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   .stat-card {
@@ -2519,8 +1739,34 @@ footer p {
 
   footer {
     padding-left: 18px;
-
     padding-right: 18px;
->>>>>>> day12
+  }
+
+  .day-card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
   }
 }
